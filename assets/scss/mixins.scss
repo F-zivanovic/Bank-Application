@@ -1,0 +1,56 @@
+@use "variables" as *;
+
+@mixin flex(
+  $justify: flex-start,
+  $align: stretch,
+  $direction: row,
+  $wrap: nowrap,
+  $gap: 0
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
+@mixin posiiton(
+  $position: absolute,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto,
+  $width: auto,
+  $height: auto
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  width: $width;
+  height: $height;
+
+  @if ($left ==50% and $top ==50%) {
+    transform: translate(-50%, -50%);
+  } @else if($right ==50% and $top ==50%) {
+    transform: translate(50%, -50%);
+  } @else if($top ==50%) {
+    transform: translateY(-50%);
+  }
+}
+
+@mixin btn($bg: $primaryColor) {
+  display: inline-block;
+  padding: 1.5rem;
+  background-color: $bg;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+
+  @if ($bg == $primaryColor) {
+    color: $secondaryColor;
+  } @else if($bg == $secondaryColor) {
+    color: $primaryColor;
+  }
+}
