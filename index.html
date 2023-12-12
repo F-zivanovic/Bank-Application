@@ -25,18 +25,18 @@
         </header>
         <form action="" class="register__form">
             <label for="rname">name:</label>
-            <input type="text" id="rname" name="name">
+            <input type="text" id="rname" name="name" required>
 
             <label for="remail">email:</label>
-            <input type="text" id="remail" name="email">
+            <input type="text" id="remail" name="email" required>
 
             <label for="rusername">username:</label>
-            <input type="text" id="rusername" name="username">
+            <input type="text" id="rusername" name="username" required>
 
             <label for="rpassword">password:</label>
-            <input type="password" id="rpassword" name="password">
+            <input type="password" id="rpassword" name="password" required>
 
-            <button class="register-user">register</button>
+            <button class="register__btn">register</button>
             <p class="register__error-msg"></p>
         </form>
     </section>
@@ -47,17 +47,17 @@
 
     <!-- Login view starts -->
     <section class="login__view">
-        <button class="register__btn">register</button>
+        <button class="register__viewBtn">register</button>
         <article class="login_item" id="left">
             <i class="fa-solid fa-piggy-bank"></i>
             <h3>welcome</h3>
-            <p>Please eneter your data for login</p>
+            <p>Please enter your data for login</p>
             <form action="" class="login__form">
                 <label for="lusername">username:</label>
-                <input type="text" id="lusername" name="username">
+                <input type="text" id="lusername" name="username" required>
 
                 <label for="lpassword">password:</label>
-                <input type="password" id="lpassword" name="password">
+                <input type="password" id="lpassword" name="password" required>
 
                 <a href="#">reset password</a>
                 <button class="login__btn">login</button>

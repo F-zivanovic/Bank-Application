@@ -4,7 +4,7 @@
 .login__view {
   @include flex(center, center, column);
 
-  .register__btn {
+  .register__viewBtn {
     @include position(fixed, 30px, auto, auto, 30px);
     @include btn($secondaryColor);
   }

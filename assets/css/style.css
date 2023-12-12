@@ -136,7 +136,7 @@ h6 {
   flex-wrap: nowrap;
   gap: 0;
 }
-.login__view .register__btn {
+.login__view .register__viewBtn {
   position: fixed;
   top: 30px;
   right: auto;
@@ -151,12 +151,12 @@ h6 {
   text-transform: uppercase;
   color: #000;
 }
-.login__view .register__btn:hover {
+.login__view .register__viewBtn:hover {
   background-color: #000;
   color: gold;
 }
 @media (max-width: 576px) {
-  .login__view .register__btn {
+  .login__view .register__viewBtn {
     padding: 0.8rem;
     font-size: 0.9rem;
   }
