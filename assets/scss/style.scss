@@ -1,3 +1,9 @@
-@use "partials/default";
-@use "mixins";
 @use "variables";
+@use "mixins";
+
+/*-------------------------
+PARTIALS
+--------------------------*/
+@use "partials/default";
+@use "partials/registerView";
+@use "partials/loginView";

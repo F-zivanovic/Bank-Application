@@ -15,7 +15,7 @@
   gap: $gap;
 }
 
-@mixin posiiton(
+@mixin position(
   $position: absolute,
   $top: auto,
   $right: auto,
@@ -43,14 +43,29 @@
 
 @mixin btn($bg: $primaryColor) {
   display: inline-block;
-  padding: 1.5rem;
+  padding: 1rem;
   background-color: $bg;
   font-size: 1.1rem;
   text-transform: uppercase;
 
   @if ($bg == $primaryColor) {
     color: $secondaryColor;
+
+    &:hover {
+      background-color: $secondaryColor;
+      color: $primaryColor;
+    }
   } @else if($bg == $secondaryColor) {
     color: $primaryColor;
+
+    &:hover {
+      background-color: $primaryColor;
+      color: $secondaryColor;
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding: 0.8rem;
+    font-size: 0.9rem;
   }
 }

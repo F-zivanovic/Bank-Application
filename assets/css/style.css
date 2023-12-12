@@ -40,4 +40,210 @@ h6 {
   margin: auto;
 }
 
+.register__view {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  width: 500px;
+  height: auto;
+  transform: translate(50%, -50%);
+  border: 2px solid #ddd;
+  display: none;
+}
+@media (max-width: 576px) {
+  .register__view {
+    width: 280px;
+  }
+}
+.register__view .register__header {
+  background-color: #000;
+  color: gold;
+  padding: 2rem;
+}
+@media (max-width: 576px) {
+  .register__view .register__header {
+    padding: 1rem;
+  }
+}
+.register__view .register__header h3 {
+  font-size: 1.5rem;
+}
+@media (max-width: 576px) {
+  .register__view .register__header h3 {
+    padding: 1.2rem;
+  }
+}
+.register__view .register__form {
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .register__view .register__form {
+    padding: 1rem;
+  }
+}
+.register__view .register__form label {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+@media (max-width: 576px) {
+  .register__view .register__form label {
+    font-size: 0.9rem;
+  }
+}
+.register__view .register__form input {
+  border: 1px solid #000;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+@media (max-width: 576px) {
+  .register__view .register__form input {
+    padding: 1rem;
+    padding: 0.5rem;
+  }
+}
+.register__view .register__form button {
+  display: inline-block;
+  padding: 1rem;
+  background-color: #000;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: gold;
+}
+.register__view .register__form button:hover {
+  background-color: gold;
+  color: #000;
+}
+@media (max-width: 576px) {
+  .register__view .register__form button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+.login__view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.login__view .register__btn {
+  position: fixed;
+  top: 30px;
+  right: auto;
+  bottom: auto;
+  left: 30px;
+  width: auto;
+  height: auto;
+  display: inline-block;
+  padding: 1rem;
+  background-color: gold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.login__view .register__btn:hover {
+  background-color: #000;
+  color: gold;
+}
+@media (max-width: 576px) {
+  .login__view .register__btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+.login__view #left {
+  height: 100vh;
+  padding: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 0;
+}
+.login__view #left i {
+  color: #000;
+  font-size: 5rem;
+}
+@media (max-width: 576px) {
+  .login__view #left i {
+    font-size: 3rem;
+  }
+}
+.login__view #left h3 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+@media (max-width: 576px) {
+  .login__view #left h3 {
+    font-size: 2rem;
+  }
+}
+.login__view #left p {
+  margin-bottom: 1rem;
+}
+.login__view #left .login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.login__view #left .login__form label {
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+@media (max-width: 576px) {
+  .login__view #left .login__form label {
+    font-size: 0.9rem;
+  }
+}
+.login__view #left .login__form input {
+  border: 1px solid #000;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+@media (max-width: 576px) {
+  .login__view #left .login__form input {
+    padding: 1rem;
+    padding: 0.5rem;
+  }
+}
+.login__view #left .login__form a {
+  text-transform: uppercase;
+  text-decoration: underline;
+  color: #000;
+  font-size: 0.9rem;
+}
+.login__view #left .login__form button {
+  display: inline-block;
+  padding: 1rem;
+  background-color: #000;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: gold;
+}
+.login__view #left .login__form button:hover {
+  background-color: gold;
+  color: #000;
+}
+@media (max-width: 576px) {
+  .login__view #left .login__form button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+/*-------------------------
+PARTIALS
+--------------------------*/
+
 /*# sourceMappingURL=style.css.map */

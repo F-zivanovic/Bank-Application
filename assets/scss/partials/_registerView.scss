@@ -1,0 +1,63 @@
+@use "../variables.scss" as *;
+@use "../mixins.scss" as *;
+
+.register__view {
+  @include position(absolute, 50%, 50%, auto, auto, 500px);
+  border: 2px solid #ddd;
+  display: none;
+
+  @media (max-width: 576px) {
+    width: 280px;
+  }
+
+  .register__header {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    padding: 2rem;
+
+    @media (max-width: 576px) {
+      padding: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+
+      @media (max-width: 576px) {
+        padding: 1.2rem;
+      }
+    }
+  }
+
+  .register__form {
+    padding: 2rem;
+    @include flex(flex-start, stretch, column, nowrap, 1rem);
+
+    @media (max-width: 576px) {
+      padding: 1rem;
+    }
+
+    label {
+      text-transform: capitalize;
+      font-size: 1.1rem;
+
+      @media (max-width: 576px) {
+        font-size: 0.9rem;
+      }
+    }
+
+    input {
+      border: 1px solid $primaryColor;
+      padding: 1rem;
+      font-size: 1.1rem;
+
+      @media (max-width: 576px) {
+        padding: 1rem;
+        padding: 0.5rem;
+      }
+    }
+
+    button {
+      @include btn($primaryColor);
+    }
+  }
+}
