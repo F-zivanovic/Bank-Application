@@ -2,6 +2,7 @@
 @use "../mixins.scss" as *;
 
 .login__view {
+  position: relative;
   @include flex(center, center, column);
 
   .register__viewBtn {
@@ -71,6 +72,36 @@
       button {
         @include btn($primaryColor);
       }
+    }
+  }
+
+  .login__modal {
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    @include position(absolute, 0, 0, auto, auto, 100%, 100%);
+    @include flex(center, center);
+    color: $secondaryColor;
+    display: none;
+
+    h3 {
+      font-size: 2rem;
+
+      @media (max-width: 576px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &__close {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 2rem;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      background-color: $secondaryColor;
     }
   }
 }

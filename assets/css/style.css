@@ -129,6 +129,7 @@ h6 {
 }
 
 .login__view {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,6 +241,45 @@ h6 {
     padding: 0.8rem;
     font-size: 0.9rem;
   }
+}
+.login__view .login__modal {
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  color: gold;
+  display: none;
+}
+.login__view .login__modal h3 {
+  font-size: 2rem;
+}
+@media (max-width: 576px) {
+  .login__view .login__modal h3 {
+    font-size: 1.5rem;
+  }
+}
+.login__view .login__modal__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: gold;
 }
 
 /*-------------------------
