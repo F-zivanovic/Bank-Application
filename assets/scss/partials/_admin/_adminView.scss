@@ -1,0 +1,77 @@
+@use "../../variables.scss" as *;
+@use "../../mixins.scss" as *;
+
+.admin__view {
+  display: none;
+  .admin__header {
+    background-color: $primaryColor;
+    color: $secondaryColor;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    @include flex(space-between, stretch, row, nowrap, 1rem);
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    h3 {
+      font-size: 2rem;
+
+      @media (max-width: 576px) {
+        font-size: 1.4rem;
+      }
+    }
+
+    .logout__btn {
+      @include btn($secondaryColor);
+    }
+  }
+
+  .admin__accounts {
+    h4 {
+      font-size: 1.7rem;
+
+      @media (max-width: 576px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .accounts__table {
+      width: 100%;
+      text-align: left;
+      margin-top: 1rem;
+      border-collapse: collapse;
+
+      @media (max-width: 576px) {
+        width: 50%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 1rem;
+      }
+
+      tr {
+        &:nth-child(even) {
+          background-color: #dddddd;
+        }
+      }
+    }
+
+    .admin__btns {
+      @include flex(center, stretch, row, nowrap, 1rem);
+      margin-top: 1.5rem;
+
+      @media (max-width: 576px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      button {
+        @include btn($secondaryColor);
+      }
+    }
+  }
+}

@@ -37,7 +37,7 @@ function validateRegisterForm(e){
 function saveUserInDB(a){
     usersDB.push(a);
     registerView.style.display = 'none';
-    loginView.style.display = 'block';
+    loginView.style.display = 'flex';
     // registerForm.submit();
 }
 
@@ -64,6 +64,8 @@ function validateLoginForm(e){
         loginView.style.display = 'none';
         adminView.style.display = 'block';
         createTable();
+        loginForm.querySelector('input[name="username"]').value = '';
+        loginForm.querySelector('input[name="password"]').value = '';
     }
     else{
         showModalError();
@@ -76,4 +78,34 @@ function showModalError(){
 
     loginModal.style.display = 'flex';
     loginModalClose.addEventListener('click', () => loginModal.style.display = 'none');
+}
+
+
+/*------------------------
+ADMIN VIEW
+-------------------------*/
+let logoutBtn = adminView.querySelector('.logout__btn');
+logoutBtn.addEventListener('click', () => {
+    adminView.style.display = 'none';
+    loginView.style.display = 'flex';
+});
+
+
+function createTable(){
+    let accountsTable = adminView.querySelector("tbody");
+    let html = '';
+    usersDB.forEach(user=>{
+
+    html += `    
+            <tr>
+                <td></td>
+                <td>${user.fullName}</td>
+                <td>${user.email}</td>
+                <td>${user.userName}</td>
+                <td>${user.password}</td>
+            </tr>`.trim();
+
+});
+
+    accountsTable.innerHTML = html;
 }

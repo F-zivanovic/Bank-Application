@@ -282,6 +282,114 @@ h6 {
   background-color: gold;
 }
 
+.admin__view {
+  display: none;
+}
+.admin__view .admin__header {
+  background-color: #000;
+  color: gold;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.admin__view .admin__header h3 {
+  font-size: 2rem;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__header h3 {
+    font-size: 1.4rem;
+  }
+}
+.admin__view .admin__header .logout__btn {
+  display: inline-block;
+  padding: 1rem;
+  background-color: gold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.admin__view .admin__header .logout__btn:hover {
+  background-color: #000;
+  color: gold;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__header .logout__btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+.admin__view .admin__accounts h4 {
+  font-size: 1.7rem;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__accounts h4 {
+    font-size: 1.5rem;
+  }
+}
+.admin__view .admin__accounts .accounts__table {
+  width: 100%;
+  text-align: left;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__accounts .accounts__table {
+    width: 50%;
+  }
+}
+.admin__view .admin__accounts .accounts__table th,
+.admin__view .admin__accounts .accounts__table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+.admin__view .admin__accounts .accounts__table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+.admin__view .admin__accounts .admin__btns {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__accounts .admin__btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.admin__view .admin__accounts .admin__btns button {
+  display: inline-block;
+  padding: 1rem;
+  background-color: gold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.admin__view .admin__accounts .admin__btns button:hover {
+  background-color: #000;
+  color: gold;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__accounts .admin__btns button {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
 /*-------------------------
 PARTIALS
 --------------------------*/
