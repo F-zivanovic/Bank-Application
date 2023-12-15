@@ -5,7 +5,6 @@ USERS REGISTRATION
 -------------------------*/
 let registerView = document.querySelector('.register__view');
 let loginView = document.querySelector('.login__view');
-let adminView = document.querySelector('.admin__view');
 let registerBtn = document.querySelector('.register__btn');
 let registerForm = document.querySelector('.register__form');
 let registerViewBtn = document.querySelector('.register__viewBtn');

@@ -7,4 +7,5 @@ PARTIALS
 @use "partials/default";
 @use "partials/registerView";
 @use "partials/loginView";
-@use "partials/_admin/adminView";
+@use "partials/_admin/accountsView";
+@use "partials/_admin/createAccountView";

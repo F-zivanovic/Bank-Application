@@ -123,8 +123,8 @@ h6 {
 }
 @media (max-width: 576px) {
   .register__view .register__form button {
-    padding: 0.8rem;
-    font-size: 0.9rem;
+    padding: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -158,8 +158,8 @@ h6 {
 }
 @media (max-width: 576px) {
   .login__view .register__viewBtn {
-    padding: 0.8rem;
-    font-size: 0.9rem;
+    padding: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 .login__view #left {
@@ -238,8 +238,8 @@ h6 {
 }
 @media (max-width: 576px) {
   .login__view #left .login__form button {
-    padding: 0.8rem;
-    font-size: 0.9rem;
+    padding: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 .login__view .login__modal {
@@ -280,6 +280,117 @@ h6 {
   line-height: 40px;
   border-radius: 50%;
   background-color: gold;
+}
+
+.admin__view .admin__view {
+  display: none;
+}
+.admin__view .admin__view .admin__header {
+  background-color: #000;
+  color: gold;
+  padding: 3rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__view .admin__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.admin__view .admin__view .admin__header h3 {
+  font-size: 2rem;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__view .admin__header h3 {
+    font-size: 1.4rem;
+  }
+}
+.admin__view .admin__view .admin__header .logout__btn {
+  display: inline-block;
+  padding: 1rem;
+  background-color: gold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.admin__view .admin__view .admin__header .logout__btn:hover {
+  background-color: #000;
+  color: gold;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__view .admin__header .logout__btn {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+.admin__view .admin__view .admin__btns {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__view .admin__btns {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.admin__view .admin__view .admin__btns button {
+  display: inline-block;
+  padding: 1rem;
+  background-color: gold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.admin__view .admin__view .admin__btns button:hover {
+  background-color: #000;
+  color: gold;
+}
+@media (max-width: 576px) {
+  .admin__view .admin__view .admin__btns button {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+.admin__view .accounts__view {
+  margin-top: 2rem;
+}
+.admin__view .accounts__view h4 {
+  font-size: 1.7rem;
+}
+@media (max-width: 576px) {
+  .admin__view .accounts__view h4 {
+    font-size: 1rem;
+  }
+}
+.admin__view .accounts__view .accounts__table {
+  width: 100%;
+  text-align: left;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+@media (max-width: 576px) {
+  .admin__view .accounts__view .accounts__table {
+    width: 50%;
+  }
+}
+.admin__view .accounts__view .accounts__table th,
+.admin__view .accounts__view .accounts__table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+.admin__view .accounts__view .accounts__table tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 .admin__view {
@@ -325,53 +436,26 @@ h6 {
 }
 @media (max-width: 576px) {
   .admin__view .admin__header .logout__btn {
-    padding: 0.8rem;
-    font-size: 0.9rem;
+    padding: 0.7rem;
+    font-size: 0.8rem;
   }
 }
-.admin__view .admin__accounts h4 {
-  font-size: 1.7rem;
-}
-@media (max-width: 576px) {
-  .admin__view .admin__accounts h4 {
-    font-size: 1.5rem;
-  }
-}
-.admin__view .admin__accounts .accounts__table {
-  width: 100%;
-  text-align: left;
-  margin-top: 1rem;
-  border-collapse: collapse;
-}
-@media (max-width: 576px) {
-  .admin__view .admin__accounts .accounts__table {
-    width: 50%;
-  }
-}
-.admin__view .admin__accounts .accounts__table th,
-.admin__view .admin__accounts .accounts__table td {
-  border: 1px solid #ddd;
-  padding: 1rem;
-}
-.admin__view .admin__accounts .accounts__table tr:nth-child(even) {
-  background-color: #dddddd;
-}
-.admin__view .admin__accounts .admin__btns {
+.admin__view .admin__btns {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   flex-direction: row;
   flex-wrap: nowrap;
+  gap: 0;
   gap: 1rem;
-  margin-top: 1.5rem;
 }
 @media (max-width: 576px) {
-  .admin__view .admin__accounts .admin__btns {
+  .admin__view .admin__btns {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-.admin__view .admin__accounts .admin__btns button {
+.admin__view .admin__btns button {
   display: inline-block;
   padding: 1rem;
   background-color: gold;
@@ -379,14 +463,71 @@ h6 {
   text-transform: uppercase;
   color: #000;
 }
-.admin__view .admin__accounts .admin__btns button:hover {
+.admin__view .admin__btns button:hover {
   background-color: #000;
   color: gold;
 }
 @media (max-width: 576px) {
-  .admin__view .admin__accounts .admin__btns button {
-    padding: 0.8rem;
-    font-size: 0.9rem;
+  .admin__view .admin__btns button {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
+.create__account__view {
+  margin-top: 2rem;
+  display: none;
+}
+.create__account__view h4 {
+  font-size: 1.7rem;
+}
+@media (max-width: 576px) {
+  .create__account__view h4 {
+    font-size: 1rem;
+  }
+}
+.create__account__view .create__inputs {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.create__account__view .create__inputs input {
+  border: 1px solid #000;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+@media (max-width: 576px) {
+  .create__account__view .create__inputs input {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+.create__account__view .create__inputs .error__msg {
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.create__account__view .create__inputs button {
+  display: inline-block;
+  padding: 1rem;
+  background-color: gold;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  color: #000;
+  align-self: flex-start;
+}
+.create__account__view .create__inputs button:hover {
+  background-color: #000;
+  color: gold;
+}
+@media (max-width: 576px) {
+  .create__account__view .create__inputs button {
+    padding: 0.7rem;
+    font-size: 0.8rem;
   }
 }
 

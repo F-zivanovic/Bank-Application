@@ -80,7 +80,14 @@
             <h3>Admin panel</h3>
             <button class="logout__btn">logout</button>
         </header>
-        <article class="admin__accounts container">
+        <div class="admin__btns container">
+            <button class="accounts__btn">accounts</button>
+            <button class="create__account__btn">create account</button>
+            <button class="update__account__btn">edit/delete account</button>
+        </div>
+
+        <!-- Accounts view starts -->
+        <article class="accounts__view container">
             <h4>All accounts:</h4>
             <table class="accounts__table">
                 <thead>
@@ -92,19 +99,42 @@
                         <th>Password:</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                </tbody>
             </table>
-            <div class="admin__btns">
-                <button class="accounts__btn">accounts</button>
-                <button class="addAccount__btn">add account</button>
-                <button class="updateAccount__btn">edit/delete account</button>
+        </article>
+        <!-- Accounts view ends -->
+
+
+        <!-- Create accounts view -->
+        <article class="create__account__view container">
+            <h4>Create accounts:</h4>
+            <div class="create__inputs">
+                <input type="text" name="id" placeholder="id" required>
+                <input type="text" name="fullname" placeholder="name" required>
+                <input type="email" name="email" placeholder="email" required>
+                <input type="text" name="username" placeholder="username" required>
+                <input type="password" name="password" placeholder="password" required>
+                <p class="error__msg"></p>
+                <button class="save__account">save account</button>
             </div>
         </article>
+        <!-- Create accounts view -->
+
+
+        <!-- Update account view starts -->
+        <article class="update__account__view container"></article>
+        <!-- Update accounts view ends-->
+
+
+
     </section>
     <!-- Admin view ends -->
 
+
     <!-- CUSTOM JS -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/admin.js"></script>
 </body>
 
 </html>
