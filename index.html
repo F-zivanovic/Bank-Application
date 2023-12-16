@@ -108,7 +108,7 @@
 
         <!-- Create accounts view -->
         <article class="create__account__view container">
-            <h4>Create accounts:</h4>
+            <h4>Create account:</h4>
             <div class="create__inputs">
                 <input type="text" name="id" placeholder="id" required>
                 <input type="text" name="fullname" placeholder="name" required>
@@ -123,7 +123,36 @@
 
 
         <!-- Update account view starts -->
-        <article class="update__account__view container"></article>
+        <article class="update__account__view container">
+            <h4>Update/Delete:</h4>
+            <table class="update__table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name:</th>
+                        <th>Email:</th>
+                        <th>Username:</th>
+                        <th>Password:</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </article>
+
+
+        <article class="update__form__view container">
+            <h4>Update account:</h4>
+            <div class="update__inputs">
+                <input type="text" name="uid" placeholder="id" required>
+                <input type="text" name="ufullname" placeholder="name" required>
+                <input type="email" name="uemail" placeholder="email" required>
+                <input type="text" name="uusername" placeholder="username" required>
+                <input type="password" name="upassword" placeholder="password" required>
+                <button class="update__form__btn">update account</button>
+            </div>
+        </article>
         <!-- Update accounts view ends-->
 
 

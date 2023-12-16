@@ -1,4 +1,23 @@
-let usersDB = [];
+let usersDB = [
+    {
+        fullname: 'filip',
+        email: 'filip@gmail.com',
+        username: 'it_ucionica',
+        password: '123'
+    },
+    {
+        fullname: 'filip1',
+        email: 'filip@gmail.com',
+        username: 'it_ucionica',
+        password: '123'
+    },
+    {
+        fullname: 'filip2',
+        email: 'filip@gmail.com',
+        username: 'it_ucionica',
+        password: '123'
+    }
+];
 
 /*------------------------
 USERS REGISTRATION
@@ -9,31 +28,31 @@ let registerBtn = document.querySelector('.register__btn');
 let registerForm = document.querySelector('.register__form');
 let registerViewBtn = document.querySelector('.register__viewBtn');
 
-registerViewBtn.addEventListener('click', () =>{
+registerViewBtn.addEventListener('click', () => {
     loginView.style.display = 'none';
     registerView.style.display = 'block';
 });
 
 registerBtn.addEventListener('click', validateRegisterForm);
 
-function validateRegisterForm(e){
+function validateRegisterForm(e) {
     e.preventDefault();
 
     let userData = {
         fullName: registerForm.querySelector('input[name="name"]').value,
-        email:registerForm.querySelector('input[name="email"]').value,
-        userName:registerForm.querySelector('input[name="username"]').value,
-        password:registerForm.querySelector('input[name="password"]').value
+        email: registerForm.querySelector('input[name="email"]').value,
+        userName: registerForm.querySelector('input[name="username"]').value,
+        password: registerForm.querySelector('input[name="password"]').value
     }
 
-    if(userData.fullName == '' || userData.email == '' || userData.userName == '' || userData.password == ''){
+    if (userData.fullName == '' || userData.email == '' || userData.userName == '' || userData.password == '') {
         registerForm.querySelector('.register__error-msg').innerHTML = 'All fields are required';
-    }else{
+    } else {
         saveUserInDB(userData);
     }
 }
 
-function saveUserInDB(a){
+function saveUserInDB(a) {
     usersDB.push(a);
     registerView.style.display = 'none';
     loginView.style.display = 'flex';
@@ -48,30 +67,30 @@ let loginBtn = document.querySelector('.login__btn');
 let loginForm = document.querySelector('.login__form');
 loginBtn.addEventListener('click', validateLoginForm);
 
-function validateLoginForm(e){
+function validateLoginForm(e) {
     e.preventDefault();
 
     let userName = loginForm.querySelector('input[name="username"]').value;
     let password = loginForm.querySelector('input[name="password"]').value;
 
-    const foundUser = usersDB.find(user => user.userName === userName && user.password === password);
+    const foundUser = usersDB.find(user => user.username === userName && user.password === password);
 
-    if((userName == '' && password == '') || (userName == '' || password == '') ){
+    if ((userName == '' && password == '') || (userName == '' || password == '')) {
         alert('All fileds are required');
     }
-    else if(foundUser){
+    else if (foundUser) {
         loginView.style.display = 'none';
         adminView.style.display = 'block';
         createTable();
         loginForm.querySelector('input[name="username"]').value = '';
         loginForm.querySelector('input[name="password"]').value = '';
     }
-    else{
+    else {
         showModalError();
     }
 }
 
-function showModalError(){
+function showModalError() {
     let loginModal = document.querySelector(".login__modal");
     let loginModalClose = document.querySelector(".login__modal__close");
 
@@ -83,28 +102,28 @@ function showModalError(){
 /*------------------------
 ADMIN VIEW
 -------------------------*/
-let logoutBtn = adminView.querySelector('.logout__btn');
-logoutBtn.addEventListener('click', () => {
-    adminView.style.display = 'none';
-    loginView.style.display = 'flex';
-});
+// let logoutBtn = adminView.querySelector('.logout__btn');
+// logoutBtn.addEventListener('click', () => {
+//     adminView.style.display = 'none';
+//     loginView.style.display = 'flex';
+// });
 
 
-function createTable(){
-    let accountsTable = adminView.querySelector("tbody");
-    let html = '';
-    usersDB.forEach(user=>{
+// function createTable() {
+//     let accountsTable = adminView.querySelector("tbody");
+//     let html = '';
+//     usersDB.forEach(user => {
 
-    html += `    
-            <tr>
-                <td></td>
-                <td>${user.fullName}</td>
-                <td>${user.email}</td>
-                <td>${user.userName}</td>
-                <td>${user.password}</td>
-            </tr>`.trim();
+//         html += `
+//             <tr>
+//                 <td></td>
+//                 <td>${ user.fullName }</td>
+//                 <td>${ user.email }</td>
+//                 <td>${ user.userName }</td>
+//                 <td>${ user.password }</td>
+//             </tr>`.trim();
 
-});
+//     });
 
-    accountsTable.innerHTML = html;
-}
+//     accountsTable.innerHTML = html;
+// }
