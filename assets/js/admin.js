@@ -56,10 +56,11 @@ ACCOUNTS VIEW
 
 createAccountsTable();
 
-function createAccountsTable() {
+function createAccountsTable(accounts) {
     let accountsTable = document.querySelector('.accounts__table tbody');
+    let currentAccounts = accounts || usersDB;
     let html = ``;
-    usersDB.forEach((user) => {
+    currentAccounts.forEach((user) => {
         html += `<tr>
                     <td>${ user.id }</td>
                     <td>${ user.fullname }</td>
@@ -190,4 +191,17 @@ function updateAccount() {
     usersDB[index] = (updatedAccount);
     createAccountsTable();
     displayView(accountsView, createAccountView, updateAccountView, updateFormView);
+}
+
+
+/*--------------------------
+SEARCH USERS DB
+--------------------------*/
+let searchInput = document.querySelector('.admin__search');
+searchInput.addEventListener('keyup', searcUsersDB);
+
+function searcUsersDB() {
+    let searchTerm = this.value;
+    let filtered = usersDB.filter((user) => user.fullname.indexOf(searchTerm) > -1 || user.email.indexOf(searchTerm) > -1 || user.username.indexOf(searchTerm) > -1 || user.password.indexOf(searchTerm) > -1);
+    createAccountsTable(filtered);
 }

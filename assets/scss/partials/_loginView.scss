@@ -5,7 +5,7 @@
 
   position: relative;
   @include flex(center, center, column);
-  // display: none;
+  display: none;
 
   .register__viewBtn {
     @include position(fixed, 30px, auto, auto, 30px);

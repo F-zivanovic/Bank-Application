@@ -136,6 +136,7 @@ h6 {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 0;
+  display: none;
 }
 .login__view .register__viewBtn {
   position: fixed;
@@ -282,9 +283,6 @@ h6 {
   background-color: gold;
 }
 
-.admin__view .admin__view {
-  display: none;
-}
 .admin__view .admin__view .admin__header {
   background-color: #000;
   color: gold;
@@ -297,7 +295,7 @@ h6 {
   flex-wrap: nowrap;
   gap: 1rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .admin__view .admin__view .admin__header {
     flex-direction: column;
     align-items: flex-start;
@@ -310,6 +308,10 @@ h6 {
   .admin__view .admin__view .admin__header h3 {
     font-size: 1.4rem;
   }
+}
+.admin__view .admin__view .admin__header .admin__search {
+  padding: 0.7rem;
+  text-transform: uppercase;
 }
 .admin__view .admin__view .admin__header .logout__btn {
   display: inline-block;
@@ -364,7 +366,6 @@ h6 {
 }
 .admin__view .accounts__view {
   margin-top: 2rem;
-  display: none;
 }
 .admin__view .accounts__view h4 {
   font-size: 1.7rem;
@@ -394,9 +395,6 @@ h6 {
   background-color: #dddddd;
 }
 
-.admin__view {
-  display: none;
-}
 .admin__view .admin__header {
   background-color: #000;
   color: gold;
@@ -409,7 +407,7 @@ h6 {
   flex-wrap: nowrap;
   gap: 1rem;
 }
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .admin__view .admin__header {
     flex-direction: column;
     align-items: flex-start;
@@ -422,6 +420,10 @@ h6 {
   .admin__view .admin__header h3 {
     font-size: 1.4rem;
   }
+}
+.admin__view .admin__header .admin__search {
+  padding: 0.7rem;
+  text-transform: uppercase;
 }
 .admin__view .admin__header .logout__btn {
   display: inline-block;
