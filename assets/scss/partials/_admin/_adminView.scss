@@ -2,7 +2,7 @@
 @use "../../mixins.scss" as *;
 
 .admin__view {
-  // display: none;
+  display: none;
 
   .admin__header {
     background-color: $primaryColor;

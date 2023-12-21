@@ -50,7 +50,6 @@ h6 {
   height: auto;
   transform: translate(50%, -50%);
   border: 2px solid #ddd;
-  display: none;
 }
 @media (max-width: 576px) {
   .register__view {
@@ -60,23 +59,18 @@ h6 {
 .register__view .register__header {
   background-color: #000;
   color: gold;
-  padding: 2rem;
-}
-@media (max-width: 576px) {
-  .register__view .register__header {
-    padding: 1rem;
-  }
+  padding: 1.5rem;
 }
 .register__view .register__header h3 {
   font-size: 1.5rem;
 }
 @media (max-width: 576px) {
   .register__view .register__header h3 {
-    padding: 1.2rem;
+    font-size: 1rem;
   }
 }
 .register__view .register__form {
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
@@ -91,7 +85,6 @@ h6 {
 }
 .register__view .register__form label {
   text-transform: capitalize;
-  font-size: 1.1rem;
 }
 @media (max-width: 576px) {
   .register__view .register__form label {
@@ -101,7 +94,6 @@ h6 {
 .register__view .register__form input {
   border: 1px solid #000;
   padding: 1rem;
-  font-size: 1.1rem;
 }
 @media (max-width: 576px) {
   .register__view .register__form input {
@@ -109,11 +101,12 @@ h6 {
     padding: 0.5rem;
   }
 }
+.register__view .register__form .register__error-msg {
+  color: red;
+}
 .register__view .register__form button {
-  display: inline-block;
   padding: 1rem;
   background-color: #000;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: gold;
 }
@@ -141,15 +134,13 @@ h6 {
 .login__view .register__viewBtn {
   position: fixed;
   top: 30px;
-  right: auto;
+  right: 30px;
   bottom: auto;
-  left: 30px;
+  left: auto;
   width: auto;
   height: auto;
-  display: inline-block;
   padding: 1rem;
   background-color: gold;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
 }
@@ -226,10 +217,8 @@ h6 {
   font-size: 0.9rem;
 }
 .login__view #left .login__form button {
-  display: inline-block;
   padding: 1rem;
   background-color: #000;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: gold;
 }
@@ -283,6 +272,9 @@ h6 {
   background-color: gold;
 }
 
+.admin__view .admin__view {
+  display: none;
+}
 .admin__view .admin__view .admin__header {
   background-color: #000;
   color: gold;
@@ -314,10 +306,8 @@ h6 {
   text-transform: uppercase;
 }
 .admin__view .admin__view .admin__header .logout__btn {
-  display: inline-block;
   padding: 1rem;
   background-color: gold;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
 }
@@ -347,10 +337,8 @@ h6 {
   }
 }
 .admin__view .admin__view .admin__btns button {
-  display: inline-block;
   padding: 1rem;
   background-color: gold;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
 }
@@ -395,6 +383,9 @@ h6 {
   background-color: #dddddd;
 }
 
+.admin__view {
+  display: none;
+}
 .admin__view .admin__header {
   background-color: #000;
   color: gold;
@@ -426,10 +417,8 @@ h6 {
   text-transform: uppercase;
 }
 .admin__view .admin__header .logout__btn {
-  display: inline-block;
   padding: 1rem;
   background-color: gold;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
 }
@@ -459,10 +448,8 @@ h6 {
   }
 }
 .admin__view .admin__btns button {
-  display: inline-block;
   padding: 1rem;
   background-color: gold;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
 }
@@ -515,10 +502,8 @@ h6 {
   text-transform: uppercase;
 }
 .create__account__view .create__inputs button {
-  display: inline-block;
   padding: 1rem;
   background-color: gold;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
   align-self: flex-start;
@@ -567,10 +552,8 @@ h6 {
 }
 .update__account__view .update__table .update__account,
 .update__account__view .update__table .delete__account {
-  display: inline-block;
   padding: 1rem;
   background-color: gold;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
 }
@@ -620,10 +603,8 @@ h6 {
   }
 }
 .update__form__view .update__inputs button {
-  display: inline-block;
   padding: 1rem;
   background-color: gold;
-  font-size: 1.1rem;
   text-transform: uppercase;
   color: #000;
   align-self: flex-start;

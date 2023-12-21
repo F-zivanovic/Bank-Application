@@ -4,8 +4,8 @@
 .register__view {
   @include position(absolute, 50%, 50%, auto, auto, 500px);
   border: 2px solid #ddd;
-  display: none;
 
+  // display: none
   @media (max-width: 576px) {
     width: 280px;
   }
@@ -13,23 +13,19 @@
   .register__header {
     background-color: $primaryColor;
     color: $secondaryColor;
-    padding: 2rem;
-
-    @media (max-width: 576px) {
-      padding: 1rem;
-    }
+    padding: 1.5rem;
 
     h3 {
       font-size: 1.5rem;
 
       @media (max-width: 576px) {
-        padding: 1.2rem;
+        font-size: 1rem;
       }
     }
   }
 
   .register__form {
-    padding: 2rem;
+    padding: 1.5rem;
     @include flex(flex-start, stretch, column, nowrap, 1rem);
 
     @media (max-width: 576px) {
@@ -38,7 +34,6 @@
 
     label {
       text-transform: capitalize;
-      font-size: 1.1rem;
 
       @media (max-width: 576px) {
         font-size: 0.9rem;
@@ -48,12 +43,15 @@
     input {
       border: 1px solid $primaryColor;
       padding: 1rem;
-      font-size: 1.1rem;
 
       @media (max-width: 576px) {
         padding: 1rem;
         padding: 0.5rem;
       }
+    }
+
+    .register__error-msg {
+      color: red;
     }
 
     button {
