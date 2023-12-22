@@ -41,6 +41,14 @@ function validateRegisterForm(e) {
         return;
     }
 
+    if (userData.username) {
+        const foundUser = usersDB.find((user) => user.username == userData.username);
+        if (foundUser) {
+            errorMsg.innerHTML = 'User already exist!';
+            return;
+        }
+    }
+
     if (userData.password.length < 5) {
         errorMsg.innerHTML = 'Password must contain at least 6 characters!';
         return;
@@ -51,11 +59,11 @@ function validateRegisterForm(e) {
     }
     else {
         errorMsg.innerHTML = '';
-        saveUser(userData);
+        saveRegisteredUser(userData);
     }
 }
 
-function saveUser(user) {
+function saveRegisteredUser(user) {
     usersDB.push(user);
     localStorage.db = JSON.stringify(usersDB);
 
@@ -79,7 +87,7 @@ function checkCardNumber(a) {
     }
     else {
         errorMsg.innerHTML = '';
-        saveUser(a);
+        saveRegisteredUser(a);
     }
 }
 

@@ -47,11 +47,10 @@
 
     <!-- Login view starts -->
     <section class="login__view">
-        <button class="register__viewBtn">register</button>
-        <article class="login_item" id="left">
+        <button class="register__view-btn">register</button>
+        <article class="login__data">
             <i class="fa-solid fa-piggy-bank"></i>
             <h3>welcome</h3>
-            <p>Please enter your data for login</p>
             <form action="" class="login__form">
                 <label for="lusername">username:</label>
                 <input type="text" id="lusername" name="username" required>
@@ -60,6 +59,7 @@
                 <input type="password" id="lpassword" name="password" required>
 
                 <a href="#">reset password</a>
+                <p class="login__error-msg"></p>
                 <button class="login__btn">login</button>
             </form>
         </article>
@@ -164,6 +164,7 @@
 
     <!-- CUSTOM JS -->
     <script src="assets/js/register.js"></script>
+    <script src="assets/js/login.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/admin.js"></script>
 </body>

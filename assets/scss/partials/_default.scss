@@ -36,6 +36,24 @@ h6 {
   text-transform: capitalize;
 }
 
+label {
+  text-transform: capitalize;
+
+  @media (max-width: 576px) {
+    font-size: 0.9rem;
+  }
+}
+
+input {
+  border: 1px solid $primaryColor;
+  padding: 1rem;
+
+  @media (max-width: 576px) {
+    padding: 1rem;
+    padding: 0.5rem;
+  }
+}
+
 .container {
   width: 80%;
   margin: auto;

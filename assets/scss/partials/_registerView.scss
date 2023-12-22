@@ -4,8 +4,8 @@
 .register__view {
   @include position(absolute, 50%, 50%, auto, auto, 500px);
   border: 2px solid #ddd;
+  display: none;
 
-  // display: none
   @media (max-width: 576px) {
     width: 280px;
   }
@@ -30,24 +30,6 @@
 
     @media (max-width: 576px) {
       padding: 1rem;
-    }
-
-    label {
-      text-transform: capitalize;
-
-      @media (max-width: 576px) {
-        font-size: 0.9rem;
-      }
-    }
-
-    input {
-      border: 1px solid $primaryColor;
-      padding: 1rem;
-
-      @media (max-width: 576px) {
-        padding: 1rem;
-        padding: 0.5rem;
-      }
     }
 
     .register__error-msg {

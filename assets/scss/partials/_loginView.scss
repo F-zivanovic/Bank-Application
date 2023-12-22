@@ -4,14 +4,13 @@
 .login__view {
   position: relative;
   @include flex(center, center, column);
-  display: none;
 
-  .register__viewBtn {
+  .register__view-btn {
     @include position(fixed, 30px, 30px);
     @include btn($secondaryColor);
   }
 
-  #left {
+  .login__data {
     height: 100vh;
     padding: 3rem;
     @include flex(center, stretch, column);
@@ -34,40 +33,19 @@
       }
     }
 
-    p {
-      margin-bottom: 1rem;
-    }
-
     .login__form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      label {
-        text-transform: capitalize;
-        font-size: 1.1rem;
-
-        @media (max-width: 576px) {
-          font-size: 0.9rem;
-        }
-      }
-
-      input {
-        border: 1px solid $primaryColor;
-        padding: 1rem;
-        font-size: 1.1rem;
-
-        @media (max-width: 576px) {
-          padding: 1rem;
-          padding: 0.5rem;
-        }
-      }
+      @include flex(flex-start, stretch, column, nowrap, 1rem);
+      width: 300px;
 
       a {
         text-transform: uppercase;
         text-decoration: underline;
         color: $primaryColor;
         font-size: 0.9rem;
+      }
+
+      .login__error-msg {
+        color: red
       }
 
       button {
