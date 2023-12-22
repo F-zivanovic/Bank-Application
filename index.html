@@ -76,39 +76,41 @@
 
     <!-- Admin view starts -->
     <section class="admin__view">
-        <header class="admin__header">
+        <aside class="admin__header">
             <h3>Admin panel</h3>
             <input type="text" class="admin__search" placeholder="full search">
-            <button class="logout__btn">logout</button>
-        </header>
-        <div class="admin__btns container">
-            <button class="accounts__btn">accounts</button>
-            <button class="create__account__btn">create account</button>
-            <button class="update__account__btn">edit/delete account</button>
-        </div>
 
-        <!-- Accounts view starts -->
-        <article class="accounts__view container">
+
+            <div class="admin__btns">
+                <button class="logout__btn">logout</button>
+                <button class="accounts__btn">accounts</button>
+                <button class="create__account__btn">create account</button>
+                <button class="update__account__btn">edit/delete account</button>
+            </div>
+        </aside>
+
+        <main class="container">
             <h4>All accounts:</h4>
-            <table class="accounts__table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name:</th>
-                        <th>Email:</th>
-                        <th>Username:</th>
-                        <th>Password:</th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </article>
-        <!-- Accounts view ends -->
+            <div class="accounts__list">
+                <table class="accounts__table">
+                    <thead>
+                        <tr>
+                            <th>Card number</th>
+                            <th>Email</th>
+                            <th>Username</th>
+                            <th>Password</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
 
 
         <!-- Create accounts view -->
-        <article class="create__account__view container">
+        <!-- <article class="create__account__view container">
             <h4>Create account:</h4>
             <div class="create__inputs">
                 <input type="text" name="id" placeholder="id" required>
@@ -119,12 +121,12 @@
                 <p class="error__msg"></p>
                 <button class="save__account">save account</button>
             </div>
-        </article>
+        </article> -->
         <!-- Create accounts view -->
 
 
         <!-- Update account view starts -->
-        <article class="update__account__view container">
+        <!-- <article class="update__account__view container">
             <h4>Update/Delete:</h4>
             <table class="update__table">
                 <thead>
@@ -140,10 +142,10 @@
                 <tbody>
                 </tbody>
             </table>
-        </article>
+        </article> -->
 
 
-        <article class="update__form__view container">
+        <!-- <article class="update__form__view container">
             <h4>Update account:</h4>
             <div class="update__inputs">
                 <input type="text" name="uid" placeholder="id" required>
@@ -153,7 +155,7 @@
                 <input type="password" name="upassword" placeholder="password" required>
                 <button class="update__form__btn">update account</button>
             </div>
-        </article>
+        </article> -->
         <!-- Update accounts view ends-->
 
 
@@ -165,8 +167,9 @@
     <!-- CUSTOM JS -->
     <script src="assets/js/register.js"></script>
     <script src="assets/js/login.js"></script>
+    <script src="assets/js/adminView.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/admin.js"></script>
+    <!-- <script src="assets/js/admin.js"></script> -->
 </body>
 
 </html>

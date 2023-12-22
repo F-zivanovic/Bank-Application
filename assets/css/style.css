@@ -258,196 +258,160 @@ input {
   background-color: gold;
 }
 
-.admin__view .admin__view {
+.admin__view {
+  display: flex;
+  height: 100vh;
   display: none;
 }
-.admin__view .admin__view .admin__header {
-  background-color: #000;
-  color: gold;
-  padding: 3rem;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 1rem;
-}
-@media (max-width: 768px) {
-  .admin__view .admin__view .admin__header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-.admin__view .admin__view .admin__header h3 {
-  font-size: 2rem;
-}
-@media (max-width: 576px) {
-  .admin__view .admin__view .admin__header h3 {
-    font-size: 1.4rem;
-  }
-}
-.admin__view .admin__view .admin__header .admin__search {
-  padding: 0.7rem;
-  text-transform: uppercase;
-}
-.admin__view .admin__view .admin__header .logout__btn {
+.admin__view .admin__header {
   padding: 1rem;
-  background-color: gold;
-  text-transform: uppercase;
-  color: #000;
+  flex: 1;
+  color: white;
+  background: linear-gradient(rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0.7)), url("/assets/img/admin.jpg");
 }
-.admin__view .admin__view .admin__header .logout__btn:hover {
-  background-color: #000;
-  color: gold;
-}
-@media (max-width: 576px) {
-  .admin__view .admin__view .admin__header .logout__btn {
-    padding: 0.7rem;
-    font-size: 0.8rem;
+@media (max-width: 992px) {
+  .admin__view .admin__header {
+    display: none;
   }
 }
-.admin__view .admin__view .admin__btns {
+.admin__view .admin__header input {
+  margin: 2rem 0;
+  border: none;
+  padding: 0.8rem;
+}
+.admin__view .admin__header .admin__btns {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  gap: 0;
   gap: 1rem;
 }
-@media (max-width: 576px) {
-  .admin__view .admin__view .admin__btns {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-.admin__view .admin__view .admin__btns button {
+.admin__view .admin__header .admin__btns button {
+  text-align: left;
   padding: 1rem;
-  background-color: gold;
-  text-transform: uppercase;
-  color: #000;
-}
-.admin__view .admin__view .admin__btns button:hover {
   background-color: #000;
+  text-transform: uppercase;
   color: gold;
 }
+.admin__view .admin__header .admin__btns button:hover {
+  background-color: gold;
+  color: #000;
+}
 @media (max-width: 576px) {
-  .admin__view .admin__view .admin__btns button {
+  .admin__view .admin__header .admin__btns button {
     padding: 0.7rem;
     font-size: 0.8rem;
   }
 }
-.admin__view .accounts__view {
-  margin-top: 2rem;
+.admin__view main {
+  flex: 6;
+  background-color: #f7f7f8;
+  height: 100%;
 }
-.admin__view .accounts__view h4 {
-  font-size: 1.7rem;
+.admin__view main h4 {
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 1rem;
 }
 @media (max-width: 576px) {
-  .admin__view .accounts__view h4 {
+  .admin__view main h4 {
     font-size: 1rem;
   }
 }
-.admin__view .accounts__view .accounts__table {
-  width: 100%;
-  text-align: left;
-  margin-top: 1rem;
-  border-collapse: collapse;
+.admin__view main .accounts__list {
+  overflow-x: auto;
 }
-@media (max-width: 576px) {
-  .admin__view .accounts__view .accounts__table {
-    width: 50%;
-  }
+.admin__view main .accounts__list .accounts__table {
+  background-color: white;
+  width: 95%;
+  margin: 1.5rem auto;
 }
-.admin__view .accounts__view .accounts__table th,
-.admin__view .accounts__view .accounts__table td {
+.admin__view main .accounts__list .accounts__table th,
+.admin__view main .accounts__list .accounts__table td {
   border: 1px solid #ddd;
   padding: 1rem;
 }
-.admin__view .accounts__view .accounts__table tr:nth-child(even) {
+.admin__view main .accounts__list .accounts__table tr:nth-child(even) {
   background-color: #dddddd;
 }
 
 .admin__view {
+  display: flex;
+  height: 100vh;
   display: none;
 }
 .admin__view .admin__header {
-  background-color: #000;
-  color: gold;
-  padding: 3rem;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 1rem;
-}
-@media (max-width: 768px) {
-  .admin__view .admin__header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-.admin__view .admin__header h3 {
-  font-size: 2rem;
-}
-@media (max-width: 576px) {
-  .admin__view .admin__header h3 {
-    font-size: 1.4rem;
-  }
-}
-.admin__view .admin__header .admin__search {
-  padding: 0.7rem;
-  text-transform: uppercase;
-}
-.admin__view .admin__header .logout__btn {
   padding: 1rem;
-  background-color: gold;
-  text-transform: uppercase;
-  color: #000;
+  flex: 1;
+  color: white;
+  background: linear-gradient(rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0.7)), url("/assets/img/admin.jpg");
 }
-.admin__view .admin__header .logout__btn:hover {
-  background-color: #000;
-  color: gold;
-}
-@media (max-width: 576px) {
-  .admin__view .admin__header .logout__btn {
-    padding: 0.7rem;
-    font-size: 0.8rem;
+@media (max-width: 992px) {
+  .admin__view .admin__header {
+    display: none;
   }
 }
-.admin__view .admin__btns {
+.admin__view .admin__header input {
+  margin: 2rem 0;
+  border: none;
+  padding: 0.8rem;
+}
+.admin__view .admin__header .admin__btns {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  gap: 0;
   gap: 1rem;
 }
-@media (max-width: 576px) {
-  .admin__view .admin__btns {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-.admin__view .admin__btns button {
+.admin__view .admin__header .admin__btns button {
+  text-align: left;
   padding: 1rem;
-  background-color: gold;
-  text-transform: uppercase;
-  color: #000;
-}
-.admin__view .admin__btns button:hover {
   background-color: #000;
+  text-transform: uppercase;
   color: gold;
 }
+.admin__view .admin__header .admin__btns button:hover {
+  background-color: gold;
+  color: #000;
+}
 @media (max-width: 576px) {
-  .admin__view .admin__btns button {
+  .admin__view .admin__header .admin__btns button {
     padding: 0.7rem;
     font-size: 0.8rem;
   }
+}
+.admin__view main {
+  flex: 6;
+  background-color: #f7f7f8;
+  height: 100%;
+}
+.admin__view main h4 {
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 1rem;
+}
+@media (max-width: 576px) {
+  .admin__view main h4 {
+    font-size: 1rem;
+  }
+}
+.admin__view main .accounts__list {
+  overflow-x: auto;
+}
+.admin__view main .accounts__list .accounts__table {
+  background-color: white;
+  width: 95%;
+  margin: 1.5rem auto;
+}
+.admin__view main .accounts__list .accounts__table th,
+.admin__view main .accounts__list .accounts__table td {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+.admin__view main .accounts__list .accounts__table tr:nth-child(even) {
+  background-color: #dddddd;
 }
 
 .create__account__view {

@@ -34,10 +34,15 @@ function validateLoginForm(e) {
     }
 
     if (userData.username == 'admin' && userData.password == 'admin') {
-        // alert('admin panel bato');
-        // return;
+        alert('Welcome to admin panel');
 
-        // prikazi admin panel
+        setTimeout(() => {
+            createAccountsTable();
+            loginView.style.display = 'none';
+            adminView.style.display = 'flex';
+        }, 1000)
+        loginView.querySelector('form').reset();
+        return;
     }
 
     if (username) {

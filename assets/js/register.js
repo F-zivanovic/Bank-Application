@@ -30,8 +30,8 @@ function validateRegisterForm(e) {
         return;
     }
 
-    if (userData.cardNumber.length !== 16) {
-        errorMsg.innerHTML = 'The card number must have 16 digit!';
+    if (userData.cardNumber.length !== 8) {
+        errorMsg.innerHTML = 'The card number must have 8 digit!';
         return;
     }
 
