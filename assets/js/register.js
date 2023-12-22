@@ -8,10 +8,9 @@ let registerView = document.querySelector('.register__view');
 let registerBtn = registerView.querySelector('.register__btn');
 let errorMsg = registerView.querySelector('.register__error-msg');
 
-registerBtn.addEventListener('click', validateRegisterForm);
+registerBtn.addEventListener('click', collectUserData);
 
-function validateRegisterForm(e) {
-
+function collectUserData(e) {
     e.preventDefault();
     let cardNumber = registerView.querySelector('input[name="card"]');
     let email = registerView.querySelector('input[name="email"]');
@@ -25,41 +24,45 @@ function validateRegisterForm(e) {
         password: password.value
     };
 
-    if (userData.cardNumber == '' || userData.email == '' || userData.username == '' || userData.password == '') {
+    validateRegisterForm(userData);
+}
+
+function validateRegisterForm(a) {
+    if (a.cardNumber == '' || a.email == '' || a.username == '' || a.password == '') {
         errorMsg.innerHTML = 'All fields are required!';
         return;
     }
 
-    if (userData.cardNumber.length !== 8) {
+    if (a.cardNumber.length !== 8) {
         errorMsg.innerHTML = 'The card number must have 8 digit!';
         return;
     }
 
     let emailFormat = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!userData.email.match(emailFormat)) {
+    if (!a.email.match(emailFormat)) {
         errorMsg.innerHTML = 'Please enter valid email!';
         return;
     }
 
-    if (userData.username) {
-        const foundUser = usersDB.find((user) => user.username == userData.username);
+    if (a.username) {
+        const foundUser = usersDB.find((user) => user.username == a.username);
         if (foundUser) {
             errorMsg.innerHTML = 'User already exist!';
             return;
         }
     }
 
-    if (userData.password.length < 5) {
+    if (a.password.length < 5) {
         errorMsg.innerHTML = 'Password must contain at least 6 characters!';
         return;
     }
 
     if (localStorage.db) {
-        checkCardNumber(userData);
+        checkCardNumber(a);
     }
     else {
         errorMsg.innerHTML = '';
-        saveRegisteredUser(userData);
+        saveRegisteredUser(a);
     }
 }
 
@@ -74,7 +77,6 @@ function saveRegisteredUser(user) {
         registerView.style.display = 'none';
         loginView.style.display = 'flex';
     }, 1000);
-
 }
 
 

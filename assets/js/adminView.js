@@ -1,4 +1,20 @@
 let adminView = document.querySelector('.admin__view');
+let logoutBtn = adminView.querySelector('.logout__btn');
+let accountBtn = adminView.querySelector('.accounts__btn');
+let accountsList = adminView.querySelector('.accounts__list');
+
+logoutBtn.addEventListener('click', logOutUser);
+accountBtn.addEventListener('click', function () {
+    createAccountView.style.display = 'none';
+    accountsList.style.display = 'block';
+});
+
+function logOutUser() {
+    adminView.style.display = 'none';
+    loginView.style.display = 'flex';
+}
+
+// createAccountsTable();
 
 function createAccountsTable() {
 

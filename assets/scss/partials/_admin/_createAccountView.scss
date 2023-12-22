@@ -1,14 +1,16 @@
 @use "../../variables.scss" as *;
 @use "../../mixins.scss" as *;
 
-@import "./adminView";
 
 .create__account__view {
-  margin-top: 2rem;
+  // margin-top: 2rem;
   display: none;
 
+
   h4 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    background-color: white;
+    padding: 1rem;
 
     @media (max-width: 576px) {
       font-size: 1rem;
@@ -16,24 +18,12 @@
   }
 
   .create__inputs {
-    margin-top: 2rem;
+    width: 95%;
+    margin: 1.5rem auto;
     @include flex(flex-start, stretch, column, nowrap, 1rem);
-
-    input {
-      border: 1px solid $primaryColor;
-      padding: 1rem;
-      font-size: 1.1rem;
-
-      @media (max-width: 576px) {
-        padding: 0.7rem;
-        font-size: 0.8rem;
-      }
-    }
 
     .error__msg {
       color: red;
-      font-weight: bold;
-      text-transform: uppercase;
     }
 
     button {

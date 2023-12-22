@@ -6,10 +6,10 @@ let loginErrorMsg = loginView.querySelector('.login__error-msg');
 registerViewBtn.addEventListener('click', showRegisterView);
 loginBtn.addEventListener('click', validateLoginForm);
 
-
 function showRegisterView() {
     loginView.style.display = 'none';
     registerView.style.display = 'block';
+    adminView.style.display = 'none';
 }
 
 function validateLoginForm(e) {

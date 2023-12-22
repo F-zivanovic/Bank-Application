@@ -79,8 +79,6 @@
         <aside class="admin__header">
             <h3>Admin panel</h3>
             <input type="text" class="admin__search" placeholder="full search">
-
-
             <div class="admin__btns">
                 <button class="logout__btn">logout</button>
                 <button class="accounts__btn">accounts</button>
@@ -90,8 +88,8 @@
         </aside>
 
         <main class="container">
-            <h4>All accounts:</h4>
             <div class="accounts__list">
+                <h4>All accounts:</h4>
                 <table class="accounts__table">
                     <thead>
                         <tr>
@@ -105,24 +103,23 @@
                     </tbody>
                 </table>
             </div>
+
+            <!-- Create accounts view starts-->
+            <div class="create__account__view">
+                <h4>Create account:</h4>
+                <div class="create__inputs">
+                    <input type="text" name="card" placeholder="card number" required>
+                    <input type="email" name="email" placeholder="email" required>
+                    <input type="text" name="username" placeholder="username" required>
+                    <input type="password" name="password" placeholder="password" required>
+                    <p class="error__msg"></p>
+                    <button class="save__account">save account</button>
+                </div>
+            </div>
+            <!-- Create accounts view ends -->
         </main>
 
 
-
-        <!-- Create accounts view -->
-        <!-- <article class="create__account__view container">
-            <h4>Create account:</h4>
-            <div class="create__inputs">
-                <input type="text" name="id" placeholder="id" required>
-                <input type="text" name="fullname" placeholder="name" required>
-                <input type="email" name="email" placeholder="email" required>
-                <input type="text" name="username" placeholder="username" required>
-                <input type="password" name="password" placeholder="password" required>
-                <p class="error__msg"></p>
-                <button class="save__account">save account</button>
-            </div>
-        </article> -->
-        <!-- Create accounts view -->
 
 
         <!-- Update account view starts -->
@@ -168,6 +165,7 @@
     <script src="assets/js/register.js"></script>
     <script src="assets/js/login.js"></script>
     <script src="assets/js/adminView.js"></script>
+    <script src="assets/js/createAccountView.js"></script>
     <script src="assets/js/main.js"></script>
     <!-- <script src="assets/js/admin.js"></script> -->
 </body>

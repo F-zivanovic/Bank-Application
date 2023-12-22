@@ -3,8 +3,6 @@
 
 .admin__view {
   display: flex;
-  height: 100vh;
-  display: none;
 
   .admin__header {
     padding: 1rem;
@@ -35,20 +33,19 @@
   main {
     flex: 6;
     background-color: #f7f7f8;
-    height: 100%;
-
-    h4 {
-      font-size: 1.5rem;
-      background-color: white;
-      padding: 1rem;
-
-      @media (max-width: 576px) {
-        font-size: 1rem;
-      }
-    }
 
     .accounts__list {
       overflow-x: auto;
+
+      h4 {
+        font-size: 1.5rem;
+        background-color: white;
+        padding: 1rem;
+
+        @media (max-width: 576px) {
+          font-size: 1rem;
+        }
+      }
 
       .accounts__table {
         background-color: white;
