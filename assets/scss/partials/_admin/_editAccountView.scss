@@ -1,0 +1,78 @@
+@use "../../variables.scss" as *;
+@use "../../mixins.scss" as *;
+
+.edit__account__view {
+    display: none;
+
+    h4 {
+        font-size: 1.5rem;
+        background-color: white;
+        padding: 1rem;
+
+        @media (max-width: 576px) {
+            font-size: 1rem;
+        }
+    }
+
+    .edit__table {
+        background-color: white;
+        width: 95%;
+        margin: 1.5rem auto;
+
+        @media (max-width: 576px) {
+            width: 50%;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+        }
+
+        tr {
+            &:nth-child(even) {
+                background-color: #dddddd;
+            }
+        }
+
+        .edit__account,
+        .delete__account {
+            gap: 1rem;
+            @include btn($secondaryColor);
+        }
+    }
+}
+
+// .update__form__view {
+//     display: none;
+//     margin-top: 2rem;
+
+//     h4 {
+//         font-size: 1.7rem;
+
+//         @media (max-width: 576px) {
+//             font-size: 1rem;
+//         }
+//     }
+
+//     .update__inputs {
+//         margin-top: 2rem;
+//         @include flex(flex-start, stretch, column, nowrap, 1rem);
+
+//         input {
+//             border: 1px solid $primaryColor;
+//             padding: 1rem;
+//             font-size: 1.1rem;
+
+//             @media (max-width: 576px) {
+//                 padding: 0.7rem;
+//                 font-size: 0.8rem;
+//             }
+//         }
+
+//         button {
+//             @include btn($secondaryColor);
+//             align-self: flex-start;
+//         }
+//     }
+// }

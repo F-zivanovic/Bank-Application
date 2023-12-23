@@ -260,6 +260,7 @@ input {
 
 .admin__view {
   display: flex;
+  display: none;
 }
 .admin__view .admin__header {
   padding: 1rem;
@@ -377,102 +378,53 @@ input {
   }
 }
 
-.update__account__view {
-  margin-top: 2rem;
+.edit__account__view {
   display: none;
 }
-.update__account__view h4 {
-  font-size: 1.7rem;
+.edit__account__view h4 {
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 1rem;
 }
 @media (max-width: 576px) {
-  .update__account__view h4 {
+  .edit__account__view h4 {
     font-size: 1rem;
   }
 }
-.update__account__view .update__table {
-  width: 100%;
-  text-align: left;
-  margin-top: 1rem;
-  border-collapse: collapse;
+.edit__account__view .edit__table {
+  background-color: white;
+  width: 95%;
+  margin: 1.5rem auto;
 }
 @media (max-width: 576px) {
-  .update__account__view .update__table {
+  .edit__account__view .edit__table {
     width: 50%;
   }
 }
-.update__account__view .update__table th,
-.update__account__view .update__table td {
+.edit__account__view .edit__table th,
+.edit__account__view .edit__table td {
   border: 1px solid #ddd;
   padding: 1rem;
 }
-.update__account__view .update__table tr:nth-child(even) {
+.edit__account__view .edit__table tr:nth-child(even) {
   background-color: #dddddd;
 }
-.update__account__view .update__table .update__account,
-.update__account__view .update__table .delete__account {
-  padding: 1rem;
-  background-color: gold;
-  text-transform: uppercase;
-  color: #000;
-}
-.update__account__view .update__table .update__account:hover,
-.update__account__view .update__table .delete__account:hover {
-  background-color: #000;
-  color: gold;
-}
-@media (max-width: 576px) {
-  .update__account__view .update__table .update__account,
-  .update__account__view .update__table .delete__account {
-    padding: 0.7rem;
-    font-size: 0.8rem;
-  }
-}
-
-.update__form__view {
-  display: none;
-  margin-top: 2rem;
-}
-.update__form__view h4 {
-  font-size: 1.7rem;
-}
-@media (max-width: 576px) {
-  .update__form__view h4 {
-    font-size: 1rem;
-  }
-}
-.update__form__view .update__inputs {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: column;
-  flex-wrap: nowrap;
+.edit__account__view .edit__table .edit__account,
+.edit__account__view .edit__table .delete__account {
   gap: 1rem;
-}
-.update__form__view .update__inputs input {
-  border: 1px solid #000;
-  padding: 1rem;
-  font-size: 1.1rem;
-}
-@media (max-width: 576px) {
-  .update__form__view .update__inputs input {
-    padding: 0.7rem;
-    font-size: 0.8rem;
-  }
-}
-.update__form__view .update__inputs button {
   padding: 1rem;
   background-color: gold;
   text-transform: uppercase;
   color: #000;
-  align-self: flex-start;
 }
-.update__form__view .update__inputs button:hover {
+.edit__account__view .edit__table .edit__account:hover,
+.edit__account__view .edit__table .delete__account:hover {
   background-color: #000;
   color: gold;
 }
 @media (max-width: 576px) {
-  .update__form__view .update__inputs button {
+  .edit__account__view .edit__table .edit__account,
+  .edit__account__view .edit__table .delete__account {
     padding: 0.7rem;
     font-size: 0.8rem;
   }

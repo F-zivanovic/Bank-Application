@@ -1,4 +1,3 @@
-let createAccountView = document.querySelector('.create__account__view');
 let createAccountsBtn = adminView.querySelector('.create__account__btn');
 let saveAccountBtn = createAccountView.querySelector('.save__account');
 
@@ -6,6 +5,7 @@ saveAccountBtn.addEventListener('click', saveAccount);
 
 createAccountsBtn.addEventListener('click', () => {
     accountsList.style.display = 'none';
+    editAccountView.style.display = 'none';
     createAccountView.style.display = 'block';
 });
 

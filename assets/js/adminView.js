@@ -1,4 +1,3 @@
-let adminView = document.querySelector('.admin__view');
 let logoutBtn = adminView.querySelector('.logout__btn');
 let accountBtn = adminView.querySelector('.accounts__btn');
 let accountsList = adminView.querySelector('.accounts__list');
@@ -6,11 +5,14 @@ let accountsList = adminView.querySelector('.accounts__list');
 logoutBtn.addEventListener('click', logOutUser);
 accountBtn.addEventListener('click', function () {
     createAccountView.style.display = 'none';
+    editAccountView.style.display = 'none';
     accountsList.style.display = 'block';
 });
 
 function logOutUser() {
     adminView.style.display = 'none';
+    createAccountView.style.display = 'none';
+    editAccountView.style.display = 'none';
     loginView.style.display = 'flex';
 }
 
