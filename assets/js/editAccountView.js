@@ -6,6 +6,7 @@ function displayView() {
     createEditTable();
     accountsList.style.display = 'none';
     createAccountView.style.display = 'none';
+    editFormView.style.display = 'none';
     editAccountView.style.display = 'block';
 }
 
@@ -30,9 +31,11 @@ function createEditTable() {
     edeitTable.innerHTML = html;
 
     let deleteAccountBtn = editAccountView.querySelectorAll('.delete__account');
+    let editAccountBtns = editAccountView.querySelectorAll('.edit__account');
 
-    deleteAccountBtn.forEach((btn) => {
+    deleteAccountBtn.forEach((btn, index) => {
         btn.addEventListener('click', deleteAccount);
+        editAccountBtns[index].addEventListener("click", displayEditForm);
     });
 };
 

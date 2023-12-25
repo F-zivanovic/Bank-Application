@@ -430,6 +430,50 @@ input {
   }
 }
 
+.edit__form__view {
+  display: none;
+}
+.edit__form__view h4 {
+  font-size: 1.5rem;
+  background-color: white;
+  padding: 1rem;
+}
+@media (max-width: 576px) {
+  .edit__form__view h4 {
+    font-size: 1rem;
+  }
+}
+.edit__form__view .edit__inputs {
+  width: 95%;
+  margin: 1.5rem auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+.edit__form__view .edit__inputs .error__msg {
+  color: red;
+}
+.edit__form__view .edit__inputs button {
+  padding: 1rem;
+  background-color: gold;
+  text-transform: uppercase;
+  color: #000;
+  align-self: flex-start;
+}
+.edit__form__view .edit__inputs button:hover {
+  background-color: #000;
+  color: gold;
+}
+@media (max-width: 576px) {
+  .edit__form__view .edit__inputs button {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+
 /*-------------------------
 PARTIALS
 --------------------------*/

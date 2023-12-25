@@ -6,6 +6,7 @@ logoutBtn.addEventListener('click', logOutUser);
 accountBtn.addEventListener('click', function () {
     createAccountView.style.display = 'none';
     editAccountView.style.display = 'none';
+    editFormView.style.display = 'none';
     accountsList.style.display = 'block';
 });
 
@@ -13,13 +14,13 @@ function logOutUser() {
     adminView.style.display = 'none';
     createAccountView.style.display = 'none';
     editAccountView.style.display = 'none';
+    editFormView.style.display = 'none';
     loginView.style.display = 'flex';
 }
 
 // createAccountsTable();
 
 function createAccountsTable() {
-
     let db = JSON.parse(localStorage.db);
     let accountsTable = adminView.querySelector('.accounts__list tbody');
     let html = ``;
@@ -34,4 +35,6 @@ function createAccountsTable() {
     });
 
     accountsTable.innerHTML = html;
+
+    console.log(db);
 }

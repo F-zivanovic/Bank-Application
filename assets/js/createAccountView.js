@@ -6,6 +6,7 @@ saveAccountBtn.addEventListener('click', saveAccount);
 createAccountsBtn.addEventListener('click', () => {
     accountsList.style.display = 'none';
     editAccountView.style.display = 'none';
+    editFormView.style.display = 'none';
     createAccountView.style.display = 'block';
 });
 

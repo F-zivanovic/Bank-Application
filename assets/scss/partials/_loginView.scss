@@ -4,6 +4,7 @@
 .login__view {
   position: relative;
   @include flex(center, center, column);
+  // display: none;
 
   .register__view-btn {
     @include position(fixed, 30px, 30px);
