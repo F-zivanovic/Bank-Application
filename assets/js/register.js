@@ -1,8 +1,8 @@
-let usersDB = [];
+// let usersDB = [];
 
-if (localStorage.db) {
-    usersDB = JSON.parse(localStorage.db);
-}
+// if (localStorage.db) {
+//     usersDB = JSON.parse(localStorage.db);
+// }
 
 let registerView = document.querySelector('.register__view');
 let registerBtn = registerView.querySelector('.register__btn');
