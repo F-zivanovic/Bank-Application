@@ -44,5 +44,6 @@ function deleteAccount() {
     this.closest('tr').remove();
     usersDB.splice(index, 1);
     localStorage.db = JSON.stringify(usersDB);
+    showPopup('Succesfully delete user account!');
     createAccountsTable();
 }

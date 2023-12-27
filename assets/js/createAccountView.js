@@ -70,7 +70,8 @@ function validateNewAccount(a) {
             errorMsg.innerHTML = '';
             usersDB.push(a);
             localStorage.db = JSON.stringify(usersDB);
-            alert('You create a new account succesfully');
+            showPopup('You create a new account succesfully');
+            // alert('You create a new account succesfully');
             createAccountsTable();
         }
     }
@@ -79,7 +80,7 @@ function validateNewAccount(a) {
         errorMsg.innerHTML = '';
         usersDB.push(a);
         localStorage.db = JSON.stringify(usersDB);
-        alert('You create a new account succesfully');
+        showPopup('You create a new account succesfully');
         createAccountsTable();
     }
 }

@@ -47,6 +47,7 @@ label {
 input {
   border: 1px solid #000;
   padding: 1rem;
+  border-radius: 10px;
 }
 @media (max-width: 576px) {
   input {
@@ -58,6 +59,56 @@ input {
 .container {
   width: 80%;
   margin: auto;
+}
+@media (max-width: 992px) {
+  .container {
+    width: 95%;
+  }
+}
+
+.popup__info {
+  position: fixed;
+  top: 50px;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  width: 350px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  z-index: 999;
+  border: 2px solid #ddd;
+  transform: translateX(-50%);
+  background-color: gold;
+  border-radius: 10px;
+  color: #000;
+  text-transform: uppercase;
+  opacity: 0;
+  font-weight: 700;
+  text-align: center;
+}
+.popup__info.show {
+  opacity: 1;
+}
+.popup__info i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: auto;
+  left: auto;
+  width: auto;
+  height: auto;
+  background: none;
+  background-color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
 }
 
 .register__view {
@@ -111,6 +162,7 @@ input {
   padding: 1rem;
   background-color: #000;
   text-transform: uppercase;
+  border-radius: 10px;
   color: gold;
 }
 .register__view .register__form button:hover {
@@ -144,6 +196,7 @@ input {
   padding: 1rem;
   background-color: gold;
   text-transform: uppercase;
+  border-radius: 10px;
   color: #000;
 }
 .login__view .register__view-btn:hover {
@@ -206,6 +259,7 @@ input {
   padding: 1rem;
   background-color: #000;
   text-transform: uppercase;
+  border-radius: 10px;
   color: gold;
 }
 .login__view .login__data .login__form button:hover {
@@ -218,65 +272,32 @@ input {
     font-size: 0.8rem;
   }
 }
-.login__view .login__modal {
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
-  text-align: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: auto;
-  left: auto;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  gap: 0;
-  color: gold;
-  display: none;
-}
-.login__view .login__modal h3 {
-  font-size: 2rem;
-}
-@media (max-width: 576px) {
-  .login__view .login__modal h3 {
-    font-size: 1.5rem;
-  }
-}
-.login__view .login__modal__close {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  font-size: 2rem;
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50%;
-  background-color: gold;
-}
 
 .admin__view {
   display: flex;
   display: none;
 }
+@media (max-width: 992px) {
+  .admin__view {
+    flex-direction: column;
+  }
+}
 .admin__view .admin__header {
+  height: 100vh;
   padding: 1rem;
   flex: 1;
   color: white;
   background: linear-gradient(rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0.7)), url("/assets/img/admin.jpg");
 }
-@media (max-width: 992px) {
-  .admin__view .admin__header {
-    display: none;
-  }
-}
 .admin__view .admin__header input {
   margin: 2rem 0;
   border: none;
   padding: 0.8rem;
+}
+@media (max-width: 992px) {
+  .admin__view .admin__header input {
+    width: 100%;
+  }
 }
 .admin__view .admin__header .admin__btns {
   display: flex;
@@ -286,11 +307,21 @@ input {
   flex-wrap: nowrap;
   gap: 1rem;
 }
+@media (max-width: 992px) {
+  .admin__view .admin__header .admin__btns {
+    flex-direction: row;
+  }
+}
+@media (max-width: 576px) {
+  .admin__view .admin__header .admin__btns {
+    flex-direction: column;
+  }
+}
 .admin__view .admin__header .admin__btns button {
-  text-align: left;
   padding: 1rem;
   background-color: #000;
   text-transform: uppercase;
+  border-radius: 10px;
   color: gold;
 }
 .admin__view .admin__header .admin__btns button:hover {
@@ -309,6 +340,7 @@ input {
 }
 .admin__view main .accounts__list {
   overflow-x: auto;
+  padding: 2rem;
 }
 .admin__view main .accounts__list h4 {
   font-size: 1.5rem;
@@ -322,7 +354,7 @@ input {
 }
 .admin__view main .accounts__list .accounts__table {
   background-color: white;
-  width: 95%;
+  width: 100%;
   margin: 1.5rem auto;
 }
 .admin__view main .accounts__list .accounts__table th,
@@ -348,7 +380,7 @@ input {
   }
 }
 .create__account__view .create__inputs {
-  width: 95%;
+  width: 100%;
   margin: 1.5rem auto;
   display: flex;
   justify-content: flex-start;
@@ -356,6 +388,7 @@ input {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 1rem;
+  padding: 2rem;
 }
 .create__account__view .create__inputs .error__msg {
   color: red;
@@ -364,6 +397,7 @@ input {
   padding: 1rem;
   background-color: gold;
   text-transform: uppercase;
+  border-radius: 10px;
   color: #000;
   align-self: flex-start;
 }
@@ -393,8 +427,9 @@ input {
 }
 .edit__account__view .edit__table {
   background-color: white;
-  width: 95%;
+  width: 100%;
   margin: 1.5rem auto;
+  padding: 2rem;
 }
 @media (max-width: 576px) {
   .edit__account__view .edit__table {
@@ -415,6 +450,7 @@ input {
   padding: 1rem;
   background-color: gold;
   text-transform: uppercase;
+  border-radius: 10px;
   color: #000;
 }
 .edit__account__view .edit__table .edit__account:hover,
@@ -444,7 +480,7 @@ input {
   }
 }
 .edit__form__view .edit__inputs {
-  width: 95%;
+  width: 100%;
   margin: 1.5rem auto;
   display: flex;
   justify-content: flex-start;
@@ -452,6 +488,7 @@ input {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 1rem;
+  padding: 2rem;
 }
 .edit__form__view .edit__inputs .error__msg {
   color: red;
@@ -460,6 +497,7 @@ input {
   padding: 1rem;
   background-color: gold;
   text-transform: uppercase;
+  border-radius: 10px;
   color: #000;
   align-self: flex-start;
 }

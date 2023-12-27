@@ -5,27 +5,39 @@
   display: flex;
   display: none;
 
+  @media(max-width:992px) {
+    flex-direction: column;
+  }
+
   .admin__header {
+    height: 100vh;
     padding: 1rem;
     flex: 1;
     color: white;
     background: linear-gradient(rgba(255, 215, 0, 0.7), rgba(255, 215, 0, 0.7)), url('/assets/img/admin.jpg');
 
-    @media(max-width:992px) {
-      display: none;
-    }
-
     input {
       margin: 2rem 0;
       border: none;
       padding: 0.8rem;
+
+      @media(max-width:992px) {
+        width: 100%;
+      }
     }
 
     .admin__btns {
       @include flex(flex-start, stretch, column, nowrap, 1rem);
 
+      @media(max-width:992px) {
+        flex-direction: row;
+      }
+
+      @media(max-width:576px) {
+        flex-direction: column;
+      }
+
       button {
-        text-align: left;
         @include btn($primaryColor);
       }
     }
@@ -37,7 +49,7 @@
 
     .accounts__list {
       overflow-x: auto;
-      // display: none;
+      padding: 2rem;
 
       h4 {
         font-size: 1.5rem;
@@ -51,7 +63,7 @@
 
       .accounts__table {
         background-color: white;
-        width: 95%;
+        width: 100%;
         margin: 1.5rem auto;
 
         th,

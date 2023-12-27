@@ -18,6 +18,14 @@
 <body>
 
 
+    <!-- Information popup starts -->
+    <div class="popup__info">
+        <p class="popup__msg"></p>
+        <i class="fa-solid fa-xmark"></i>
+    </div>
+    <!-- Information ends  -->
+
+
     <!-- Registration view starts -->
     <section class="register__view">
         <header class="register__header">
@@ -58,16 +66,11 @@
                 <label for="lpassword">password:</label>
                 <input type="password" id="lpassword" name="password" required>
 
-                <a href="#">reset password</a>
+                <a href="#">forgot password</a>
                 <p class="login__error-msg"></p>
                 <button class="login__btn">login</button>
             </form>
         </article>
-
-        <div class="login__modal">
-            <h3>User does not exist. Try again.</h3>
-            <button class="login__modal__close">X</button>
-        </div>
     </section>
     <!-- Login view ends -->
 
@@ -87,7 +90,7 @@
             </div>
         </aside>
 
-        <main class="container">
+        <main>
             <div class="accounts__list">
                 <h4>All accounts:</h4>
                 <table class="accounts__table">

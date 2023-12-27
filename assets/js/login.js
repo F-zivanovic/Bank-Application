@@ -1,4 +1,3 @@
-let loginView = document.querySelector('.login__view');
 let registerViewBtn = loginView.querySelector('.register__view-btn');
 let loginBtn = loginView.querySelector('.login__btn');
 let loginErrorMsg = loginView.querySelector('.login__error-msg');
@@ -9,7 +8,7 @@ loginBtn.addEventListener('click', validateLoginForm);
 function showRegisterView() {
     loginView.style.display = 'none';
     registerView.style.display = 'block';
-    adminView.style.display = 'none';
+    // adminView.style.display = 'none';
 }
 
 function validateLoginForm(e) {
@@ -34,34 +33,28 @@ function validateLoginForm(e) {
     }
 
     if (userData.username == 'admin' && userData.password == 'admin') {
-        alert('Welcome to admin panel');
+        loginView.querySelector('form').reset();
+        showPopup('Welcome to admin panel');
 
         setTimeout(() => {
             createAccountsTable();
             loginView.style.display = 'none';
             adminView.style.display = 'flex';
-        }, 1000)
-        loginView.querySelector('form').reset();
+        }, 2500)
+
         return;
     }
 
     if (username) {
         const foundUser = usersDB.find((user) => user.username == userData.username && user.password == userData.password);
         if (foundUser) {
-            alert('You login succesfully');
             loginView.querySelector('form').reset();
+            showPopup('You loged succesfully')
             loginErrorMsg.innerHTML = '';
 
             // prikazi profil korisnika
         } else {
-            let loginModal = loginView.querySelector('.login__modal');
-            loginModal.style.display = 'flex';
-            let closeBtn = loginView.querySelector('.login__modal__close');
-            closeBtn.addEventListener('click', () => {
-                loginModal.style.display = 'none';
-                loginView.querySelector('form').reset();
-                loginErrorMsg.innerHTML = '';
-            });
+            showPopup('User does not exist. Try again.');
         }
     }
 }

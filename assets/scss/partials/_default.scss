@@ -1,4 +1,5 @@
 @use "../variables.scss" as *;
+@use "../mixins.scss" as *;
 
 * {
   box-sizing: border-box;
@@ -47,6 +48,7 @@ label {
 input {
   border: 1px solid $primaryColor;
   padding: 1rem;
+  border-radius: 10px;
 
   @media (max-width: 576px) {
     padding: 1rem;
@@ -57,4 +59,38 @@ input {
 .container {
   width: 80%;
   margin: auto;
+
+  @media (max-width: 992px) {
+    width: 95%;
+  }
+}
+
+.popup__info {
+  @include position(fixed, 50px, auto, auto, 50%, 350px, 150px);
+  @include flex(center, center);
+  z-index: 999;
+  border: 2px solid #ddd;
+  transform: translateX(-50%);
+  background-color: $secondaryColor;
+  border-radius: 10px;
+  color: $primaryColor;
+  text-transform: uppercase;
+  opacity: 0;
+  font-weight: 700;
+  text-align: center;
+
+  &.show {
+    opacity: 1;
+  }
+
+  i {
+    @include position(absolute, 10px, 10px);
+    background: none;
+    background-color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+  }
 }

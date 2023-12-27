@@ -1,7 +1,6 @@
 @use "../../variables.scss" as *;
 @use "../../mixins.scss" as *;
 
-
 .create__account__view {
   display: none;
 
@@ -17,9 +16,10 @@
   }
 
   .create__inputs {
-    width: 95%;
+    width: 100%;
     margin: 1.5rem auto;
     @include flex(flex-start, stretch, column, nowrap, 1rem);
+    padding: 2rem;
 
     .error__msg {
       color: red;

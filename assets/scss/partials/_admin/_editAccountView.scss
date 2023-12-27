@@ -16,8 +16,9 @@
 
     .edit__table {
         background-color: white;
-        width: 95%;
+        width: 100%;
         margin: 1.5rem auto;
+        padding: 2rem;
 
         @media (max-width: 576px) {
             width: 50%;

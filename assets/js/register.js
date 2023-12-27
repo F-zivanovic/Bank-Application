@@ -1,10 +1,3 @@
-// let usersDB = [];
-
-// if (localStorage.db) {
-//     usersDB = JSON.parse(localStorage.db);
-// }
-
-let registerView = document.querySelector('.register__view');
 let registerBtn = registerView.querySelector('.register__btn');
 let errorMsg = registerView.querySelector('.register__error-msg');
 
@@ -71,12 +64,12 @@ function saveRegisteredUser(user) {
     localStorage.db = JSON.stringify(usersDB);
 
     registerView.querySelector('form').reset();
-    alert('You registered succesfully');
+    showPopup('You registered succesfully');
 
     setTimeout(function () {
         registerView.style.display = 'none';
         loginView.style.display = 'flex';
-    }, 1000);
+    }, 2500);
 }
 
 

@@ -45,6 +45,7 @@
   padding: 1rem;
   background-color: $bg;
   text-transform: uppercase;
+  border-radius: 10px;
 
   @if ($bg ==$primaryColor) {
     color: $secondaryColor;
