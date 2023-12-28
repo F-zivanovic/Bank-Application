@@ -1,14 +1,15 @@
 let createAccountsBtn = adminView.querySelector('.create__account__btn');
 let saveAccountBtn = createAccountView.querySelector('.save__account');
 
-saveAccountBtn.addEventListener('click', saveAccount);
-
 createAccountsBtn.addEventListener('click', () => {
     accountsList.style.display = 'none';
     editAccountView.style.display = 'none';
     editFormView.style.display = 'none';
     createAccountView.style.display = 'block';
 });
+
+saveAccountBtn.addEventListener('click', saveAccount);
+
 
 function saveAccount() {
 
@@ -21,7 +22,8 @@ function saveAccount() {
         cardNumber: cardNumber.value,
         email: email.value,
         username: username.value,
-        password: password.value
+        password: password.value,
+        bilance: 5000
     };
 
     validateNewAccount(newAccount);
@@ -71,8 +73,8 @@ function validateNewAccount(a) {
             usersDB.push(a);
             localStorage.db = JSON.stringify(usersDB);
             showPopup('You create a new account succesfully');
-            // alert('You create a new account succesfully');
             createAccountsTable();
+            emptyInputs();
         }
     }
 
@@ -82,6 +84,14 @@ function validateNewAccount(a) {
         localStorage.db = JSON.stringify(usersDB);
         showPopup('You create a new account succesfully');
         createAccountsTable();
+        emptyInputs();
     }
+}
+
+function emptyInputs(){
+    createAccountView.querySelector('input[name="card"]').value = '';
+    createAccountView.querySelector('input[name="email"]').value = '';
+    createAccountView.querySelector('input[name="username"]').value = '';
+    createAccountView.querySelector('input[name="password"]').value = '';
 }
 

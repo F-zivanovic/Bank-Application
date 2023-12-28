@@ -2,113 +2,111 @@
 @use "../../mixins.scss" as *;
 
 .user__account__view {
-    // display: none;
-    background-color: #f3f3f3;
+  display: none;
+  background-color: #f3f3f3;
 
-    .logout__btn {
-        @include btn($secondaryColor);
-        @include position(fixed, auto, 20px, 20px, auto);
+  .logout__btn {
+    @include btn($secondaryColor);
+    @include position(fixed, auto, 20px, 20px, auto);
+  }
+
+  .user__header {
+    @include flex(space-between, center);
+    padding: 2rem;
+    background-color: $primaryColor;
+    color: $secondaryColor;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
     }
 
-    .user__header {
-        @include flex(space-between, center);
+    .user__info {
+      h3 {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+
+      .time {
+        color: white;
+      }
+    }
+
+    .user__balance {
+      font-size: 2rem;
+    }
+  }
+
+  .user__wrapper {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .user__history {
+      height: 70vh;
+      overflow-y: auto;
+      background-color: white;
+      border-radius: 10px;
+      flex: 2;
+
+      ul {
+        .action {
+          display: flex;
+          padding: 1.5rem;
+          align-items: center;
+          justify-content: space-between;
+          border-bottom: 1px solid #ddd;
+        }
+      }
+    }
+
+    .user__actions {
+      flex: 1;
+
+      .transfer__money {
+        border-radius: 10px;
+        background: linear-gradient(to top left, #e52a5a, #ff585f);
         padding: 2rem;
-        background-color: $primaryColor;
-        color: $secondaryColor;
+        margin-bottom: 2rem;
 
-        @media(max-width:768px) {
-            flex-direction: column;
+        h4 {
+          margin-bottom: 1rem;
         }
 
-        .user__info {
-            h3 {
-                margin-bottom: 1rem;
-                font-size: 1.5rem;
-            }
+        div {
+          @include flex(flex-start, flex-start, column, nowrap, 1rem);
 
-            .time {
-                color: white;
-            }
+          input {
+            padding: 0.8rem;
+          }
+
+          button {
+            @include btn($primaryColor);
+          }
+        }
+      }
+
+      .deposit__money {
+        border-radius: 10px;
+        padding: 2rem;
+        background: linear-gradient(to top left, #39b385, #9be15d);
+        h4 {
+          margin-bottom: 1rem;
         }
 
-        .user__balance {
-            font-size: 2rem;
+        div {
+          input {
+            padding: 0.8rem;
+          }
+
+          button {
+            @include btn($primaryColor);
+          }
         }
+      }
     }
-
-    .user__wrapper {
-        display: flex;
-        gap: 2rem;
-        padding: 2rem 0;
-
-        @media(max-width:768px) {
-            flex-direction: column;
-        }
-
-        .user__history {
-            height: 70vh;
-            overflow-y: auto;
-            background-color: white;
-            border-radius: 10px;
-            flex: 2;
-
-            ul {
-                .action {
-                    display: flex;
-                    padding: 1.5rem;
-                    align-items: center;
-                    justify-content: space-between;
-                    border-bottom: 1px solid #ddd;
-                }
-            }
-        }
-
-        .user__actions {
-            flex: 1;
-
-            .transfer__money {
-                border-radius: 10px;
-                background: linear-gradient(to top left, #e52a5a, #ff585f);
-                padding: 2rem;
-                margin-bottom: 2rem;
-
-                h4 {
-                    margin-bottom: 1rem;
-                }
-
-                div {
-                    @include flex(flex-start, flex-start, column, nowrap, 1rem);
-
-                    input {
-                        padding: 0.8rem;
-                    }
-
-                    button {
-                        @include btn($primaryColor);
-                    }
-                }
-            }
-
-            .deposit__money {
-                border-radius: 10px;
-                padding: 2rem;
-                background: linear-gradient(to top left, #39b385, #9be15d);
-                ;
-
-                h4 {
-                    margin-bottom: 1rem;
-                }
-
-                div {
-                    input {
-                        padding: 0.8rem;
-                    }
-
-                    button {
-                        @include btn($primaryColor);
-                    }
-                }
-            }
-        }
-    }
+  }
 }

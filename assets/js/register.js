@@ -5,17 +5,16 @@ registerBtn.addEventListener('click', collectUserData);
 
 function collectUserData(e) {
     e.preventDefault();
-    let cardNumber = registerView.querySelector('input[name="card"]');
-    let email = registerView.querySelector('input[name="email"]');
-    let username = registerView.querySelector('input[name="username"]');
-    let password = registerView.querySelector('input[name="password"]');
 
-    let userData = {
-        cardNumber: cardNumber.value,
-        email: email.value,
-        username: username.value,
-        password: password.value
-    };
+    const inputs = registerView.querySelectorAll('input');
+
+    let userData ={
+        cardNumber: inputs[0].value,
+        email: inputs[1].value,
+        username: inputs[2].value,
+        password: inputs[3].value,
+        bilance: 5000
+    }
 
     validateRegisterForm(userData);
 }
@@ -69,7 +68,7 @@ function saveRegisteredUser(user) {
     setTimeout(function () {
         registerView.style.display = 'none';
         loginView.style.display = 'flex';
-    }, 2500);
+    }, 2000);
 }
 
 

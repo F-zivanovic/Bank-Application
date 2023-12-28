@@ -1,9 +1,11 @@
+// Buttons
 let logoutBtn = adminView.querySelector('.logout__btn');
 let accountBtn = adminView.querySelector('.accounts__btn');
 let accountsList = adminView.querySelector('.accounts__list');
 let search = adminView.querySelector('.admin__search');
 
 
+// Listeners
 search.addEventListener('keyup', searchDB);
 logoutBtn.addEventListener('click', logOutUser);
 accountBtn.addEventListener('click', function () {
@@ -23,12 +25,11 @@ function logOutUser() {
 
 function searchDB() {
     let searchTerm = this.value;
-    let filtered = usersDB.filter((user) => user.cardNumber.indexOf(searchTerm) > -1 || user.email.indexOf(searchTerm) > -1 || user.username.indexOf(searchTerm) > -1 || user.password.indexOf(searchTerm) > -1);
+    let filtered = usersDB.filter((user) => user.cardNumber.indexOf(searchTerm) > -1 || user.email.indexOf(searchTerm) > -1 || user.username.indexOf(searchTerm) > -1 || user.password.indexOf(searchTerm) > -1 || user.bilance == parseInt(searchTerm));
 
     createAccountsTable(filtered);
 }
 
-createAccountsTable();
 
 function createAccountsTable(accounts) {
     let currentAccounts = accounts || usersDB;
@@ -41,6 +42,7 @@ function createAccountsTable(accounts) {
                     <td>${ user.email }</td>
                     <td>${ user.username }</td>
                     <td>${ user.password }</td>
+                    <td>${user.bilance}</td>
                 </tr>`.trim();
     });
 

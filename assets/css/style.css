@@ -168,7 +168,6 @@ input {
   flex-direction: column;
   flex-wrap: nowrap;
   gap: 0;
-  display: none;
 }
 .login__view .register__view-btn {
   position: fixed;
@@ -428,6 +427,8 @@ input {
   text-transform: uppercase;
   border-radius: 10px;
   color: #000;
+  padding: 0.8rem;
+  font-size: 0.8rem;
 }
 .edit__account__view .edit__table .edit__account:hover,
 .edit__account__view .edit__table .delete__account:hover {
@@ -489,6 +490,7 @@ input {
 }
 
 .user__account__view {
+  display: none;
   background-color: #f3f3f3;
 }
 .user__account__view .logout__btn {

@@ -1,5 +1,3 @@
-// showUserProfile(usersDB);
-
 function showUserProfile(user) {
 
     setTimeout(function () {
@@ -7,6 +5,13 @@ function showUserProfile(user) {
         userAccountView.style.display = 'block';
     }, 2500);
 
-    userAccountView.innerHTML = `Welcome ${ user[0].username }`;
+    userAccountView.querySelector('.user__name').innerHTML = `Welcome ${ user }`;
 
+    let logoutBtn = userAccountView.querySelector('.logout__btn');
+    logoutBtn.addEventListener('click', logout);
 }
+
+function logout(){
+    userAccountView.style.display = 'none';
+    loginView.style.display = 'flex';
+};

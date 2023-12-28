@@ -31,6 +31,19 @@ function validateLoginForm(e) {
         return;
     }
 
+    if (userData.username == 'admin' && userData.password == 'admin') {
+        loginView.querySelector('form').reset();
+        showPopup('Welcome to admin panel');
+
+        setTimeout(() => {
+            createAccountsTable();
+            loginView.style.display = 'none';
+            adminView.style.display = 'flex';
+        }, 2000)
+
+        return;
+    }
+
     if (userData.username) {
         const founUsername = usersDB.find((user) => user.username == userData.username)
 
@@ -47,19 +60,6 @@ function validateLoginForm(e) {
             loginErrorMsg.innerHTML = 'Password is not correct!';
             return;
         }
-    }
-
-    if (userData.username == 'admin' && userData.password == 'admin') {
-        loginView.querySelector('form').reset();
-        showPopup('Welcome to admin panel');
-
-        setTimeout(() => {
-            createAccountsTable();
-            loginView.style.display = 'none';
-            adminView.style.display = 'flex';
-        }, 2500)
-
-        return;
     }
 
     if (username) {

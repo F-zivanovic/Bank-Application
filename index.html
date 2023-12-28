@@ -102,6 +102,7 @@
                             <th>Email</th>
                             <th>Username</th>
                             <th>Password</th>
+                            <th>Bilance</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -133,7 +134,6 @@
                             <th>Card number:</th>
                             <th>Email:</th>
                             <th>Username:</th>
-                            <th>Password:</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -153,6 +153,7 @@
                     <input type="email" name="eemail" placeholder="email" required>
                     <input type="text" name="eusername" placeholder="username" required>
                     <button class="edit__form__btn">edit account</button>
+                    <p class="error__msg"></p>
                 </div>
             </div>
             <!-- Edit form view ends -->
@@ -167,7 +168,7 @@
         <button class="logout__btn">logout</button>
         <header class="user__header">
             <div class="user__info">
-                <h3>welcome: </h3>
+                <h3 class="user__name"></h3>
                 <h4>current balance:</h4>
                 <p class="time"></p>
             </div>

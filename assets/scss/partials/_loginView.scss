@@ -4,7 +4,7 @@
 .login__view {
   position: relative;
   @include flex(center, center, column);
-  display: none;
+  // display: none;
 
   .register__view-btn {
     @include position(fixed, 30px, 30px);
@@ -37,7 +37,7 @@
       }
 
       .login__error-msg {
-        color: red
+        color: red;
       }
 
       button {

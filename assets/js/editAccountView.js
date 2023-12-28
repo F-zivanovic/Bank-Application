@@ -20,7 +20,6 @@ function createEditTable() {
                     <td>${ user.cardNumber }</td>
                     <td>${ user.email }</td>
                     <td>${ user.username }</td>
-                    <td>${ user.password }</td>
                     <td>
                     <button data-index="${ index }" class="edit__account">edit account</button>
                     <button data-index="${ index }" class="delete__account">delete account</button>

@@ -22,18 +22,43 @@ function filUpEditForm(a) {
 }
 
 function validateEditAccountForm() {
+    let card = editFormView.querySelector('input[name="ecard"]').value;
+    let username = editFormView.querySelector('input[name="eusername"]').value;
+    let email = editFormView.querySelector('input[name="eemail"]').value;
+    let errroMsgEditForm = editFormView.querySelector('.error__msg');
+    
+    if (card == '' || email == '' || username == '')    {
+        errroMsgEditForm.innerHTML = 'All fields are required!';
+        return;
+    }
 
-    let card = editFormView.querySelector('input[name="ecard"]');
-    let username = editFormView.querySelector('input[name="eusername"]');
-    let email = editFormView.querySelector('input[name="eemail"]');
+    if (card.length !== 8) {
+        errroMsgEditForm.innerHTML = 'The card number must have 8 digit!';
+        return;
+    }
 
-    let editedAccount = {
-        card: card.value,
-        username: username.value,
-        email: email.value
-    };
+    if (username) {
+        const foundUser = usersDB.find((user) => user.username == username);
+        if (foundUser) {
+            errroMsgEditForm.innerHTML = 'User already exist!';
+            return;
+        }
+    }
 
-    usersDB[index] = editedAccount;
+    if (card) {
+        const foundCard = usersDB.find((user) => user.cardNumber == card);
+        if (foundCard) {
+            errroMsgEditForm.innerHTML = 'Card number already exist!';
+            return;
+        }
+    }
+
+    usersDB[index].cardNumber = card;
+    usersDB[index].username = username;
+    usersDB[index].email = email;
+    errroMsgEditForm.innerHTML = '';
+
     localStorage.db = JSON.stringify(usersDB);
     createAccountsTable();
+    showPopup('Succesfully update account!');
 }

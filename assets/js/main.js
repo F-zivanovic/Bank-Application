@@ -24,5 +24,5 @@ function showPopup(msg) {
 
     setTimeout(function () {
         popup.classList.remove('show');
-    }, 1500);
+    }, 1200);
 }
