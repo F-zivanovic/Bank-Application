@@ -71,7 +71,7 @@ input {
   z-index: 999;
   border: 2px solid #ddd;
   transform: translateX(-50%);
-  background-color: $secondaryColor;
+  background-color: white;
   border-radius: 10px;
   color: $primaryColor;
   text-transform: uppercase;
@@ -83,14 +83,14 @@ input {
     opacity: 1;
   }
 
-  i {
-    @include position(absolute, 10px, 10px);
-    background: none;
-    background-color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-  }
+  // i {
+  //   @include position(absolute, 10px, 10px);
+  //   background: none;
+  //   background-color: white;
+  //   border-radius: 50%;
+  //   width: 20px;
+  //   height: 20px;
+  //   line-height: 20px;
+  //   text-align: center;
+  // }
 }

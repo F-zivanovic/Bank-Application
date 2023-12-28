@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Application</title>
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -21,7 +24,6 @@
     <!-- Information popup starts -->
     <div class="popup__info">
         <p class="popup__msg"></p>
-        <i class="fa-solid fa-xmark"></i>
     </div>
     <!-- Information ends  -->
 
@@ -57,7 +59,7 @@
     <section class="login__view">
         <button class="register__view-btn">register</button>
         <article class="login__data">
-            <i class="fa-solid fa-piggy-bank"></i>
+            <img src="assets/img/logo.png" alt="logo img" width="80px">
             <h3>welcome</h3>
             <form action="" class="login__form">
                 <label for="lusername">username:</label>
@@ -159,6 +161,73 @@
     <!-- Admin view ends -->
 
 
+
+    <!-- User account view starts -->
+    <div class="user__account__view">
+        <button class="logout__btn">logout</button>
+        <header class="user__header">
+            <div class="user__info">
+                <h3>welcome: </h3>
+                <h4>current balance:</h4>
+                <p class="time"></p>
+            </div>
+            <div class="user__balance">5000€</div>
+        </header>
+        <div class="user__wrapper container">
+
+            <div class="user__history">
+                <ul>
+                    <li class="action">
+                        <div class="action__type">deposit</div>
+                        <div class="action__time">29/07/2021</div>
+                        <div class="action__ammount">€1,213</div>
+                    </li>
+                    <li class="action">
+                        <div class="action__type">deposit</div>
+                        <div class="action__time">29/07/2021</div>
+                        <div class="action__ammount">€1,213</div>
+                    </li>
+                    <li class="action">
+                        <div class="action__type">deposit</div>
+                        <div class="action__time">29/07/2021</div>
+                        <div class="action__ammount">€1,213</div>
+                    </li>
+                    <li class="action">
+                        <div class="action__type">deposit</div>
+                        <div class="action__time">29/07/2021</div>
+                        <div class="action__ammount">€1,213</div>
+                    </li>
+                    <li class="action">
+                        <div class="action__type">deposit</div>
+                        <div class="action__time">29/07/2021</div>
+                        <div class="action__ammount">€1,213</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="user__actions">
+                <div class="transfer__money">
+                    <h4>transfer money:</h4>
+                    <div>
+                        <input type="text" placeholder="transfer to">
+                        <input type="number" placeholder="amount">
+                        <button>transfer</button>
+                    </div>
+                </div>
+                <div class="deposit__money">
+                    <h4>Deposit money:</h4>
+                    <div>
+                        <input type="number" placeholder="amount">
+                        <button>deposit</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- User account view ends -->
+
+
+
     <!-- CUSTOM JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/register.js"></script>
@@ -167,6 +236,7 @@
     <script src="assets/js/createAccountView.js"></script>
     <script src="assets/js/editAccountView.js"></script>
     <script src="assets/js/editFormView.js"></script>
+    <script src="assets/js/userAccountView.js"></script>
     <!-- <script src="assets/js/admin.js"></script> -->
 </body>
 

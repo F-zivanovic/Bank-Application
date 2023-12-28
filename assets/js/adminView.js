@@ -32,7 +32,6 @@ createAccountsTable();
 
 function createAccountsTable(accounts) {
     let currentAccounts = accounts || usersDB;
-    // let db = JSON.parse(localStorage.db);
     let accountsTable = adminView.querySelector('.accounts__list tbody');
     let html = ``;
 
@@ -46,6 +45,4 @@ function createAccountsTable(accounts) {
     });
 
     accountsTable.innerHTML = html;
-
-    // console.log(db);
 }

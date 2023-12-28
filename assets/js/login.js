@@ -8,7 +8,6 @@ loginBtn.addEventListener('click', validateLoginForm);
 function showRegisterView() {
     loginView.style.display = 'none';
     registerView.style.display = 'block';
-    // adminView.style.display = 'none';
 }
 
 function validateLoginForm(e) {
@@ -32,6 +31,24 @@ function validateLoginForm(e) {
         return;
     }
 
+    if (userData.username) {
+        const founUsername = usersDB.find((user) => user.username == userData.username)
+
+        if (!founUsername) {
+            loginErrorMsg.innerHTML = 'Username is not correct!';
+            return;
+        }
+    }
+
+    if (userData.password) {
+        const founPassword = usersDB.find((user) => user.password == userData.password)
+
+        if (!founPassword) {
+            loginErrorMsg.innerHTML = 'Password is not correct!';
+            return;
+        }
+    }
+
     if (userData.username == 'admin' && userData.password == 'admin') {
         loginView.querySelector('form').reset();
         showPopup('Welcome to admin panel');
@@ -48,11 +65,11 @@ function validateLoginForm(e) {
     if (username) {
         const foundUser = usersDB.find((user) => user.username == userData.username && user.password == userData.password);
         if (foundUser) {
-            loginView.querySelector('form').reset();
             showPopup('You loged succesfully')
             loginErrorMsg.innerHTML = '';
+            showUserProfile(username.value);
+            loginView.querySelector('form').reset();
 
-            // prikazi profil korisnika
         } else {
             showPopup('User does not exist. Try again.');
         }

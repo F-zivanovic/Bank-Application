@@ -4,6 +4,7 @@
 .login__view {
   position: relative;
   @include flex(center, center, column);
+  display: none;
 
   .register__view-btn {
     @include position(fixed, 30px, 30px);
@@ -14,15 +15,6 @@
     height: 100vh;
     padding: 3rem;
     @include flex(center, stretch, column);
-
-    i {
-      color: $primaryColor;
-      font-size: 5rem;
-
-      @media (max-width: 576px) {
-        font-size: 3rem;
-      }
-    }
 
     h3 {
       font-size: 2.5rem;

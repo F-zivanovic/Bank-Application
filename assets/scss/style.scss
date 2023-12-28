@@ -10,4 +10,5 @@ PARTIALS
 @use "partials/_admin/adminView";
 @use "partials/_admin/createAccountView";
 @use "partials/_admin/editAccountView";
-@use "partials/_admin/editFormView"
+@use "partials/_admin/editFormView";
+@use "partials/_user/accountView";

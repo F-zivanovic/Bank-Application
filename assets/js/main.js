@@ -12,10 +12,11 @@ const adminView = document.querySelector('.admin__view');
 const createAccountView = document.querySelector('.create__account__view');
 const editAccountView = document.querySelector('.edit__account__view');
 const editFormView = document.querySelector('.edit__form__view');
+const userAccountView = document.querySelector('.user__account__view');
+
 
 function showPopup(msg) {
     let popup = document.querySelector(".popup__info");
-    let popupCloseBtn = document.querySelector('.popup__info > i');
     let popupMsg = document.querySelector('.popup__msg');
 
     popup.classList.add('show');
