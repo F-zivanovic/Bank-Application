@@ -8,7 +8,7 @@ function collectUserData(e) {
 
     const inputs = registerView.querySelectorAll('input');
 
-    let userData ={
+    let userData = {
         cardNumber: inputs[0].value,
         email: inputs[1].value,
         username: inputs[2].value,
@@ -45,7 +45,7 @@ function validateRegisterForm(a) {
     }
 
     if (a.password.length < 5) {
-        errorMsg.innerHTML = 'Password must contain at least 6 characters!';
+        errorMsg.innerHTML = 'Password must contain at least 5 characters!';
         return;
     }
 

@@ -68,7 +68,7 @@
                 <label for="lpassword">password:</label>
                 <input type="password" id="lpassword" name="password" required>
 
-                <a href="#">forgot password</a>
+                <a href="#" class="forgot__btn">forgot password</a>
                 <p class="login__error-msg"></p>
                 <button class="login__btn">login</button>
             </form>
@@ -229,6 +229,30 @@
 
 
 
+    <!-- Forgot password view starts -->
+    <div class="forgot__view container">
+        <header class="forgot__header">
+            <h3>forgot password</h3>
+        </header>
+        <form action="" method="">
+            <label for="fusername">username</label>
+            <input type="text" id="fusername" required>
+
+            <label for="newpassword">new password:</label>
+            <input type="password" id="newpassword" required>
+
+            <label for="confirmpassword">confirm password:</label>
+            <input type="password" id="confirmpassword" required>
+
+            <button class="reset__btn">reset password</button>
+            <p class="error__msg"></p>
+        </form>
+    </div>
+    <!-- Forgot password view ends -->
+
+
+
+
     <!-- CUSTOM JS -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/register.js"></script>
@@ -238,7 +262,7 @@
     <script src="assets/js/editAccountView.js"></script>
     <script src="assets/js/editFormView.js"></script>
     <script src="assets/js/userAccountView.js"></script>
-    <!-- <script src="assets/js/admin.js"></script> -->
+    <script src="assets/js/forgotView.js"></script>
 </body>
 
 </html>

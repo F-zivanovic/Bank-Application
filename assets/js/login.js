@@ -1,7 +1,13 @@
 let registerViewBtn = loginView.querySelector('.register__view-btn');
 let loginBtn = loginView.querySelector('.login__btn');
 let loginErrorMsg = loginView.querySelector('.login__error-msg');
+let forgotBtn = loginView.querySelector('.forgot__btn');
 
+
+forgotBtn.addEventListener('click', function () {
+    loginView.style.display = 'none';
+    forgotPasswordView.style.display = 'block';
+})
 registerViewBtn.addEventListener('click', showRegisterView);
 loginBtn.addEventListener('click', validateLoginForm);
 

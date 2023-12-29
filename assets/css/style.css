@@ -636,6 +636,71 @@ input {
   }
 }
 
+.forgot__view {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  bottom: auto;
+  left: auto;
+  width: 500px;
+  height: auto;
+  transform: translate(50%, -50%);
+  display: none;
+  border: 2px solid #ddd;
+}
+@media (max-width: 576px) {
+  .forgot__view {
+    width: 280px;
+  }
+}
+.forgot__view .forgot__header {
+  background-color: #000;
+  color: gold;
+  padding: 1.5rem;
+}
+.forgot__view .forgot__header h3 {
+  font-size: 1.5rem;
+}
+@media (max-width: 576px) {
+  .forgot__view .forgot__header h3 {
+    font-size: 1rem;
+  }
+}
+.forgot__view form {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 1rem;
+}
+@media (max-width: 576px) {
+  .forgot__view form {
+    padding: 1rem;
+  }
+}
+.forgot__view form button {
+  padding: 1rem;
+  background-color: #000;
+  text-transform: uppercase;
+  border-radius: 10px;
+  color: gold;
+}
+.forgot__view form button:hover {
+  background-color: gold;
+  color: #000;
+}
+@media (max-width: 576px) {
+  .forgot__view form button {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+}
+.forgot__view form .error__msg {
+  color: red;
+}
+
 /*-------------------------
 PARTIALS
 --------------------------*/
