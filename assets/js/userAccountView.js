@@ -61,6 +61,7 @@ function depositMoney() {
             localStorage.db = JSON.stringify(usersDB);
             depositValue = '';
             userAccountView.querySelector('.deposit__money input[type = "number"]').value = '';
+            showHistory(curentUser);
 
         }
         else {
@@ -72,11 +73,11 @@ function depositMoney() {
             localStorage.db = JSON.stringify(usersDB);
             depositValue = '';
             userAccountView.querySelector('.deposit__money input[type = "number"]').value = '';
+            showHistory(curentUser);
         }
     }
 
 }
-
 
 function logout() {
     userAccountView.style.display = 'none';
@@ -84,12 +85,28 @@ function logout() {
 };
 
 function showHistory(acc) {
-    // console.log('radi');
-    // let userHistory = userAccountView.querySelector('.user__history ul');
 
-    // acc.forEach((item) => {
+    let userHistory = userAccountView.querySelector('.user__history ul');
+    let html = ``;
 
-    // });
+    acc.history.forEach((item) => {
+        html += ` 
+        <li class="action">
+                <div class="action__type">${ item.type }</div>
+                <div class="action__time">${ item.time }</div>
+                <div class="action__ammount">${ item.value }€</div>
+        </li>`
+    });
 
+    userHistory.innerHTML = html;
+    let actionType = userAccountView.querySelectorAll('.action__type');
+
+    acc.history.forEach((item, index) => {
+        if (item.type == 'Deposit') {
+            actionType[index].classList.add('deposit');
+        } else {
+            actionType[index].classList.add('withdrawal');
+        }
+    });
 
 }

@@ -559,16 +559,34 @@ input {
   background-color: white;
   border-radius: 10px;
   flex: 2;
+  overflow-y: scroll;
 }
 .user__account__view .user__wrapper .user__history h3 {
   padding: 2rem;
 }
 .user__account__view .user__wrapper .user__history ul .action {
   display: flex;
-  padding: 1.5rem;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 0;
+  padding: 1.5rem;
   border-bottom: 1px solid #ddd;
+}
+.user__account__view .user__wrapper .user__history ul .action .action__type.deposit {
+  background-color: green;
+  color: white;
+  border-radius: 20px;
+  padding: 0.7rem;
+  font-size: 0.8rem;
+}
+.user__account__view .user__wrapper .user__history ul .action .action__type.withdrawal {
+  background-color: red;
+  color: white;
+  border-radius: 20px;
+  padding: 0.7rem;
+  font-size: 0.8rem;
 }
 .user__account__view .user__wrapper .user__actions {
   flex: 1;

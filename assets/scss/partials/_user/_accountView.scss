@@ -51,6 +51,7 @@
       background-color: white;
       border-radius: 10px;
       flex: 2;
+      overflow-y: scroll;
 
       h3 {
         padding: 2rem;
@@ -58,11 +59,28 @@
 
       ul {
         .action {
-          display: flex;
+          @include flex(space-between, center);
           padding: 1.5rem;
-          align-items: center;
-          justify-content: space-between;
           border-bottom: 1px solid #ddd;
+
+          .action__type {
+
+            &.deposit {
+              background-color: green;
+              color: white;
+              border-radius: 20px;
+              padding: 0.7rem;
+              font-size: 0.8rem;
+            }
+
+            &.withdrawal {
+              background-color: red;
+              color: white;
+              border-radius: 20px;
+              padding: 0.7rem;
+              font-size: 0.8rem;
+            }
+          }
         }
       }
     }
