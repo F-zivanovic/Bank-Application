@@ -1,4 +1,4 @@
-# Bank Application
+# Bank Application - <a href="https://f-zivanovic.github.io/Bank-Application/">Live preview</a>
 <p>This Single Page Application  handles some of the basics operations of a bank, such as customer's deposit and withdraw, money transferences, such as admin panel for bank manager</p>
 
 ## Curent features
