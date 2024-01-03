@@ -17,7 +17,7 @@
     <li>Admin can researching user accounts.</li>
   </ul>
   <li>User has access to his accounts.</li>
-  <ii>User has access to the history of his payments.</li>
+  <li>User has access to the history of his payments.</li>
   <li>User can deposti/withdraw funds from his accounts only to other accounts in application system.</li>
   <li>User can change his password.</li>
 </ul>
