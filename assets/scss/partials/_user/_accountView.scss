@@ -31,7 +31,7 @@
       }
     }
 
-    .user__balance {
+    .user__bilance {
       font-size: 2rem;
     }
   }
@@ -51,6 +51,10 @@
       background-color: white;
       border-radius: 10px;
       flex: 2;
+
+      h3 {
+        padding: 2rem;
+      }
 
       ul {
         .action {
@@ -93,6 +97,7 @@
         border-radius: 10px;
         padding: 2rem;
         background: linear-gradient(to top left, #39b385, #9be15d);
+
         h4 {
           margin-bottom: 1rem;
         }

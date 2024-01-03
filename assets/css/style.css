@@ -540,7 +540,7 @@ input {
 .user__account__view .user__header .user__info .time {
   color: white;
 }
-.user__account__view .user__header .user__balance {
+.user__account__view .user__header .user__bilance {
   font-size: 2rem;
 }
 .user__account__view .user__wrapper {
@@ -559,6 +559,9 @@ input {
   background-color: white;
   border-radius: 10px;
   flex: 2;
+}
+.user__account__view .user__wrapper .user__history h3 {
+  padding: 2rem;
 }
 .user__account__view .user__wrapper .user__history ul .action {
   display: flex;
