@@ -12,7 +12,6 @@ function showUserProfile(user) {
         userAccountView.style.display = 'block';
     }, 2500);
 
-    // let userHistory = userAccountView.querySelector('.user__history ul');
     let userName = userAccountView.querySelector('.user__name');
     curentUser = usersDB.find(acc => acc.username == user);
 
@@ -32,7 +31,72 @@ function showUserProfile(user) {
 }
 
 function transferMoney() {
-    console.log('radi');
+
+    let transferValue = Number(userAccountView.querySelector('.transfer__money input[type="number"]').value);
+    let transferAccont = userAccountView.querySelector('.transfer__money input[type="text"]').value;
+
+    let userData = {
+        time: new Date(),
+        type: 'Withdraw',
+        value: transferValue
+    }
+
+
+    if (transferValue == '' || transferAccont == '') {
+        showPopup('All fields for transfer money are required!');
+        return;
+    }
+
+    if (transferAccont) {
+
+        const foundUser = usersDB.find((user) => user.username == transferAccont);
+
+        if (!foundUser) {
+            showPopup('Users does not exists in database!');
+        }
+        else {
+            foundUser.bilance += userData.value;
+            showPopup('Succesfully transfer');
+            let total = parseInt(userBilance.innerHTML);
+            total -= userData.value
+            userBilance.innerHTML = total;
+            curentUser.bilance = total;
+            localStorage.db = JSON.stringify(usersDB);
+            userAccountView.querySelector('.transfer__money input[type="text"]').value = '';
+            userAccountView.querySelector('.transfer__money input[type="number"]').value = '';
+
+            if (!foundUser.history) {
+                foundUser.history = [];
+                foundUser.history.push({
+                    time: new Date(),
+                    type: 'Deposit',
+                    value: transferValue
+                });
+                localStorage.db = JSON.stringify(usersDB);
+            }
+            else {
+                foundUser.history.push({
+                    time: new Date(),
+                    type: 'Deposit',
+                    value: transferValue
+                });
+                localStorage.db = JSON.stringify(usersDB);
+            }
+
+            if (!curentUser.history) {
+                curentUser.history = [];
+                curentUser.history.push(userData);
+                localStorage.db = JSON.stringify(usersDB);
+                showHistory(curentUser);
+            }
+            else {
+                curentUser.history.push(userData);
+                localStorage.db = JSON.stringify(usersDB);
+                showHistory(curentUser);
+            }
+
+        }
+    }
 }
 
 function depositMoney() {
