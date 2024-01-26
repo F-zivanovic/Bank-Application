@@ -26,9 +26,9 @@ function validateForgotPasswordForm(a) {
     }
 
     if (a.username) {
-        let foundUser = usersDB.find((user) => user.username == a.username);
+        // let foundUser = usersDB.find((user) => user.username == a.username);
 
-        if (!foundUser) {
+        if (!findUserInDB(a, 'username')) {
             forgotErrorMsg.innerHTML = 'User does not exist!';
             return;
         }

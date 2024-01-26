@@ -7,7 +7,8 @@ let forgotBtn = loginView.querySelector('.forgot__btn');
 forgotBtn.addEventListener('click', function () {
     loginView.style.display = 'none';
     forgotPasswordView.style.display = 'block';
-})
+});
+
 registerViewBtn.addEventListener('click', showRegisterView);
 loginBtn.addEventListener('click', validateLoginForm);
 
@@ -51,18 +52,18 @@ function validateLoginForm(e) {
     }
 
     if (userData.username) {
-        const founUsername = usersDB.find((user) => user.username == userData.username)
+        // const founUsername = usersDB.find((user) => user.username == userData.username)
 
-        if (!founUsername) {
+        if (!findUserInDB(userData, 'username')) {
             loginErrorMsg.innerHTML = 'Username is not correct!';
             return;
         }
     }
 
     if (userData.password) {
-        const founPassword = usersDB.find((user) => user.password == userData.password)
+        // const founPassword = usersDB.find((user) => user.password == userData.password)
 
-        if (!founPassword) {
+        if (!findUserInDB(userData, 'password')) {
             loginErrorMsg.innerHTML = 'Password is not correct!';
             return;
         }

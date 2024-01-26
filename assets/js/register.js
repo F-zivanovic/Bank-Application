@@ -37,8 +37,8 @@ function validateRegisterForm(a) {
     }
 
     if (a.username) {
-        const foundUser = usersDB.find((user) => user.username == a.username);
-        if (foundUser) {
+
+        if (findUserInDB(a, 'username')) {
             errorMsg.innerHTML = 'User already exist!';
             return;
         }
@@ -74,9 +74,9 @@ function saveRegisteredUser(user) {
 
 function checkCardNumber(a) {
     let db = JSON.parse(localStorage.db);
-    const foundUser = db.find(user => user.cardNumber == a.cardNumber);
+    // const foundUser = db.find(user => user.cardNumber == a.cardNumber);
 
-    if (foundUser) {
+    if (findUserInDB(a, 'cardNumber')) {
         errorMsg.innerHTML = 'Please enter the new card number!';
     }
     else {

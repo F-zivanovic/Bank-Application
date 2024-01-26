@@ -16,6 +16,7 @@ const userAccountView = document.querySelector('.user__account__view');
 const forgotPasswordView = document.querySelector('.forgot__view');
 
 
+// Popup message
 function showPopup(msg) {
     let popup = document.querySelector(".popup__info");
     let popupMsg = document.querySelector('.popup__msg');
@@ -26,4 +27,13 @@ function showPopup(msg) {
     setTimeout(function () {
         popup.classList.remove('show');
     }, 1200);
+}
+
+
+
+// Find user
+function findUserInDB(a, b) {
+
+    const foundUser = usersDB.find((user) => user[b] == a[b]);
+    return foundUser;
 }

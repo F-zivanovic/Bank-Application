@@ -49,8 +49,8 @@ function validateNewAccount(a) {
     }
 
     if (a.username) {
-        const foundUser = usersDB.find((user) => user.username == a.username);
-        if (foundUser) {
+        // const foundUser = usersDB.find((user) => user.username == a.username);
+        if (findUserInDB(a, 'username')) {
             errorMsg.innerHTML = 'User already exist!';
             return;
         }
@@ -63,9 +63,9 @@ function validateNewAccount(a) {
 
     if (localStorage.db) {
         let db = JSON.parse(localStorage.db);
-        const foundUser = db.find(user => user.cardNumber == a.cardNumber);
+        // const foundUser = db.find(user => user.cardNumber == a.cardNumber);
 
-        if (foundUser) {
+        if (findUserInDB(a, 'cardNumber')) {
             errorMsg.innerHTML = 'Please enter the new card number!';
         }
         else {
@@ -88,7 +88,7 @@ function validateNewAccount(a) {
     }
 }
 
-function emptyInputs(){
+function emptyInputs() {
     createAccountView.querySelector('input[name="card"]').value = '';
     createAccountView.querySelector('input[name="email"]').value = '';
     createAccountView.querySelector('input[name="username"]').value = '';
